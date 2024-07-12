@@ -1,5 +1,11 @@
-import React, { useEffect, useState } from "react"
-import { themes, ThemeContext } from "./ThemeContext"
+import React, { createContext, useEffect, useState } from "react"
+
+const themes = {
+  dark: 'dark',
+  light: 'light',
+}
+
+const ThemeContext = createContext({})
 
 
 const getTheme = () => {
@@ -18,7 +24,7 @@ interface Props {
 } 
 
 
-export const ThemeService = ({children}: Props) => {
+export const ThemeProvider = ({children}: Props) => {
   const [theme, setTheme] = useState(getTheme)
 
   useEffect(() => {
