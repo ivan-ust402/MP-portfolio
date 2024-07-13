@@ -1,6 +1,6 @@
-import './App.scss'
-import { Toggle } from './components/Toggle/Toggle'
-import { themes, useTheme } from './services/ThemeService'
+import 'src/App.scss'
+import { Toggle } from 'src/components/Toggle/Toggle'
+import { themes, useTheme } from 'src/services/ThemeService'
 
 export const App = () => {
   const { theme, setTheme } = useTheme()
