@@ -8,7 +8,7 @@ interface Props {
 
 export const Toggle = ({ value, onChange }: Props) => {
   return (
-    <label className={styles.switch} htmlFor='toggler'>
+    <label className={styles.root} htmlFor='toggler'>
       <input 
         id='toggler'
         type="checkbox"
@@ -17,7 +17,7 @@ export const Toggle = ({ value, onChange }: Props) => {
         readOnly 
       />
       <span className={styles.slider} />
-      <span className={styles.value} />
+      <span className={styles.wave} />
     </label>
   )
 }

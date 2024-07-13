@@ -1,12 +1,16 @@
+import './App.scss'
+import { Toggle } from './components/Toggle/Toggle'
+import { themes, useTheme } from './services/ThemeService'
 
-import './App.scss';
-
-function App() {
+export const App = () => {
+  const { theme, setTheme } = useTheme()
   return (
-    <div className="App">
-      <h1>There are will be Dark Theme</h1>
-    </div>
-  );
+    <Toggle
+      onChange={() => {
+        if (theme === themes.light) { setTheme(themes.dark) }
+        if (theme === themes.dark) { setTheme(themes.light) }
+      }}
+      value={theme === themes.dark}
+    />
+  )
 }
-
-export { App };
