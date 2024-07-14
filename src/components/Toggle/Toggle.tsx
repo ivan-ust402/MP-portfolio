@@ -1,24 +1,26 @@
 import React from 'react'
-import styles from './index.module.scss'
+import styles from './toggle.module.scss'
 
 interface Props {
-  value: boolean,
-  onChange: () => void
+  onChange: () => void,
+  value: boolean
 }
 
 export const Toggle = ({ value, onChange }: Props) => {
   return (
+    <div className='toggle-block'>
     <label className={styles.root} htmlFor='toggler'>
-      <input 
+      <input
         id='toggler'
         type="checkbox"
         onClick={onChange}
         checked={value}
-        readOnly 
+        readOnly
       />
       <span className={styles.slider} />
       <span className={styles.wave} />
     </label>
+    </div >
   )
 }
 

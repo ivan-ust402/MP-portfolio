@@ -24,6 +24,7 @@ const getTheme = () => {
   }
 
   const userMedia = window.matchMedia('(prefers-color-scheme: light)')
+  
 
   if (userMedia.matches) {
     return themes.light
@@ -38,6 +39,7 @@ interface Props {
 
 export const ThemeProvider = ({ children }: Props) => {
   const [theme, setTheme] = useState(getTheme)
+  console.log(theme)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
