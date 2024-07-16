@@ -1,5 +1,7 @@
 $primary-font: 'Roboto Mono';
 $secondary-font: 'actay_widebold';
+$yellow-color: #FAFF12;
+$green-color: #BAF415;
 
 :root[data-theme="light"] {
   --background-color: #f9f9f9;
@@ -28,6 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-color);
   transition: all .5s ease;
+  padding: 20px;
 }
 
 h1 {

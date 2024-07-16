@@ -11,7 +11,7 @@ interface Props {
   isLight: boolean
 }
 
-export default function ToggleBlock({ isLight }: Props) {
+export default function ToggleMain({ isLight }: Props) {
   return (
     <div className='toggle-block'>
       <div className={isLight ? styles.active : styles.inactive}>
@@ -25,5 +25,28 @@ export default function ToggleBlock({ isLight }: Props) {
         <img src={darkMan} alt="toggle picture developer" />
       </div>
     </div>
+  )
+}
+
+interface Props {
+  onChange: () => void,
+  value: boolean
+}
+
+export const Toggle = ({ value, onChange }: Props) => {
+  return (
+    <div className='toggle-block'>
+    <label className={styles.root} htmlFor='toggler'>
+      <input
+        id='toggler'
+        type="checkbox"
+        onClick={onChange}
+        checked={value}
+        readOnly
+      />
+      <span className={styles.slider} />
+      <span className={styles.wave} />
+    </label>
+    </div >
   )
 }
