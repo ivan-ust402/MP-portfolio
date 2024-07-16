@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 300px;
+  &__link {
+    text-decoration: none;
+    text-align: center;
+    transition: all .0s ease;
+    &::before{
+      content: '\a0';
+      color: var(--background-color);
+    }
+    &::after{
+      content: '\a0';
+      color: var(--background-color);
+    }
+  }
+  &__activeLink {
+    align-items: center;
+    transition: all .0s ease;
+    &::before{
+      content: '[';
+      color: var(--primary-color);
+    }
+    &::after{
+      content: ']';
+      color: var(--primary-color);
+
+    }
+  }
+}

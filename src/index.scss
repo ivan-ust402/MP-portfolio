@@ -30,7 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-color);
   transition: all .5s ease;
-  padding: 20px;
+  height: 100%;
 }
 
 h1 {
@@ -72,6 +72,10 @@ h2 {
   font-style: normal;
   color: var(--primary-color);
   transition: all .5s ease;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 
