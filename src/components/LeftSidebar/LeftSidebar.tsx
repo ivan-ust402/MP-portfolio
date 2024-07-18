@@ -14,12 +14,11 @@ export const LeftSidebar = () => {
       setErrorCopyText('')
       await navigator.clipboard.writeText(text)
       setSuccessCopyText('Text copied successfully!')
-      await new Promise((res) => setTimeout(res, 3000))
+      await new Promise((res) => setTimeout(res, 1500))
       setSuccessCopyText('')
-      throw new Error('')
     } catch (error) {
       setErrorCopyText('Something went wrong!')
-      await new Promise((res) => setTimeout(res, 3000))
+      await new Promise((res) => setTimeout(res, 1500))
       setErrorCopyText('')
     }
   }

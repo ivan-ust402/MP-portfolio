@@ -48,7 +48,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-color);
   transition: all .5s ease;
-  min-height: 100vh;
+
 }
 
 h1 {
@@ -108,6 +108,13 @@ a {
   transition: all .5s ease;
   @media (hover: hover) {
     &:hover {
+      background-color: var(--btn-bg-hover-color);
+      border: 1px solid var(--btn-border-hover-color);
+      color: var(--btn-text-hover-color);
+    }
+  }
+  @media (hover: none) {
+    &:active {
       background-color: var(--btn-bg-hover-color);
       border: 1px solid var(--btn-border-hover-color);
       color: var(--btn-text-hover-color);
