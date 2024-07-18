@@ -1,0 +1,23 @@
+.rightSidebar {
+  flex: 1;
+  padding-top: 60px;
+  padding-bottom: 84px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-left: 1px solid var(--primary-color);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // &__text {
+
+  // }
+  &__suggestion {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  &__point > circle {
+    fill: var(--secondary-color);
+  }
+}

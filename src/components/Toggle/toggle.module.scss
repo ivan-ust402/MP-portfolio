@@ -92,6 +92,8 @@ $transition-time: .5s;
   flex-direction: column;
   gap: 13px;
   height: 361px;
+  margin-top: 199px;
+  padding-bottom: 355px;
   // &__description {    
   // }
   &__text {
@@ -119,7 +121,7 @@ $transition-time: .5s;
     }
     input:checked ~ .toggle__moon{
       opacity: 1;
-      top: 0;
+      top: 25px;
     }
     input:checked ~ .toggle__sun{
       opacity: 0;
@@ -129,7 +131,7 @@ $transition-time: .5s;
   &__sun {
     position: absolute;
     opacity: 1;
-    top: 0;
+    top: 25px;
     transition: all $transition-time ease-in-out;
   }
   &__moon {
@@ -141,7 +143,7 @@ $transition-time: .5s;
   &__developer {
     position: absolute;
     display: flex;
-    top: 130px;
+    top: 135px;
     max-width: 234px;
     opacity: 0;
     transition: all $transition-time ease;
@@ -152,9 +154,11 @@ $transition-time: .5s;
 
   @media (hover: hover) {
     &__sun:hover svg {
+      cursor: pointer;
       fill: #FAFF12;
     }
     &__moon:hover path {
+      cursor: pointer;
       fill: #f9f9f9;
     }
   }

@@ -1,12 +1,9 @@
 .layout {
   display: flex;
-  height: 100%;
+  min-height: 100vh;
   flex-direction: row;
   justify-content: space-between;
   &__main {
-    flex: 2;
-    padding-top: 60px;
-    padding-right: 24px;
-    padding-left: 24px;
+    flex: 4;
   }
 }

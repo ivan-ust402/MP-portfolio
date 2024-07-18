@@ -1,0 +1,26 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  &__main {
+    flex: 3;
+    padding-top: 60px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 84px;
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+    justify-content: space-between;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+  &__text {
+    p {
+      opacity: 0.5;
+    }
+  }
+}

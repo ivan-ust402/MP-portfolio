@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 300px;
+
   &__link {
     text-decoration: none;
     text-align: center;
@@ -27,6 +28,14 @@
       content: ']';
       color: var(--primary-color);
 
+    }
+  }
+  &__select {
+    &::after {
+      content: '\a0';
+    }
+    &::before {
+      content: '\a0';
     }
   }
 }

@@ -39,7 +39,6 @@ interface Props {
 
 export const ThemeProvider = ({ children }: Props) => {
   const [theme, setTheme] = useState(getTheme)
-  console.log(theme)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme

@@ -16,7 +16,7 @@ export const Navigation = () => {
       <NavLink to='/contacts' className={setActiveClassName}>
         Contacts
       </NavLink>
-      <select className={styles.select} name="language" >
+      <select className={styles.nav__select} name="language" >
         <option value="RU">RU</option>
         <option value="EN">EN</option>
       </select>
