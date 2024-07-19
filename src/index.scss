@@ -19,6 +19,12 @@ $green-color: #BAF415;
   --btn-text-color: var(--background-color);
   --btn-border-color: var(--secondary-color);
   --btn-border-hover-color: var(--secondary-color);
+  --drop-color: #222222;
+  --drop-color-hover: #222222;
+  --drop-bg: #f9f9f9;
+  --drop-bg-hover: #baf415;
+  --drop-border: #baf415;
+  --drop-border-hover: #baf415;
 }
 
 :root[data-theme="dark"] {
@@ -31,6 +37,12 @@ $green-color: #BAF415;
   --btn-text-color: var(--background-color);
   --btn-border-color: var(--secondary-color);
   --btn-border-hover-color: var(--primary-color);
+  --drop-color: #222222;
+  --drop-color-hover: #222222;
+  --drop-bg: #f9f9f9;
+  --drop-bg-hover: #faff12;
+  --drop-border: #f9f9f9;
+  --drop-border-hover: #faff12;
 }
 
 body {

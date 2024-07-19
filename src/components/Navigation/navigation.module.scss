@@ -3,7 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 300px;
-
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
   &__link {
     text-decoration: none;
     text-align: center;
@@ -37,5 +41,13 @@
     &::before {
       content: '\a0';
     }
+  }
+}
+
+@media (max-width: 1450px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
   }
 }
