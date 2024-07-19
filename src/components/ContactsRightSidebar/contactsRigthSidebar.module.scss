@@ -13,18 +13,6 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 144px);
-  padding-right: 32px;
-    
-  }
-  &__text {
-    padding-bottom: 205px;
-  }
-  &__suggestion {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
-  &__point > circle {
-    fill: var(--secondary-color);
+    padding-right: 32px;
   }
 }

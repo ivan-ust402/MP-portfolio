@@ -11,7 +11,6 @@ export default function LanguageSelector() {
   }, [])
   const closeMenuHandler = useCallback(() => {
     setActive(false)
-    console.log('1')
   }, [])
 
   const onChangeLanguage = useCallback((item) => {

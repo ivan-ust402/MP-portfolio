@@ -1,7 +1,15 @@
 {
   "screens": {
     "about": {
-      "title": "FRONTEND DEVELOPER"
+      "title": "FRONTEND DEVELOPER",
+      "button": "перейти к проектам",
+      "rightSidebar": {
+        "firstParagraph": "Добро пожаловать!",
+        "secondParagraph": "Меня зовут Иван,я фронтед разработчик с фундаментальным бэкграундом в инженерии.",
+        "thirdParagraph": "Я занимаюсь созданием интерактивных пользовательских веб-интерфейсов.",
+        "fourthParagraph": "Я верю, что как инженеры, мы можем создавать вещи, которые потенциально могут изменить мир к лучшему.",
+        "point": "открыт к предложениям о работе"
+      }
     }
   },
   "components": {
@@ -17,7 +25,11 @@
         "telegram": "Телеграм",
         "email": "Email"
       },
-      "signature": "DESIGN BY @SVETLANA_UST" 
+      "signature": "DESIGN BY @SVETLANA_UST",
+      "message": {
+        "error": "Что-то пошло не так!",
+        "success": "Email адрес успешно скопирован!"
+      }  
     }
   }
 }

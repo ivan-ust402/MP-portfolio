@@ -29,7 +29,7 @@ export const About = () => {
             <p>{'}'};</p>
           </div>
         </div>
-        <Link className={`${styles.about__btn} primary-btn text`} to={'projects'}>[go to projects]</Link>
+        <Link className={`${styles.about__btn} primary-btn text`} to={'projects'}>[{t('screens.about.button')}]</Link>
       </div>
       <AboutRightSidebar />
     </div>

@@ -31,19 +31,19 @@
       border: 1px solid var(--drop-border);
       cursor: pointer;
       padding: 0px 9.5px;
-      background-color: var(--drop-bg);
+      background: var(--drop-bg);
       color: var(--drop-color);
       @media (hover: hover) {
         &:hover {
           color: var(--drop-color-hover);
-          background-color: var(--drop-bg-hover);
+          background: var(--drop-bg-hover);
           border-color: var(--drop-border-hover);
         }
       }
       @media (hover: none) {
         &:active {
           color: var(--drop-color-hover);
-          background-color: var(--drop-bg-hover);
+          background: var(--drop-bg-hover);
           border-color: var(--drop-border-hover);
         }
       }

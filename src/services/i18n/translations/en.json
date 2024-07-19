@@ -1,7 +1,29 @@
 {
   "screens": {
     "about": {
-      "title": "FRONTEND DEVELOPER"
+      "title": "FRONTEND DEVELOPER",
+      "button": "go to projects",
+      "rightSidebar": {
+        "firstParagraph": "Hi there!",
+        "secondParagraph": "My name is Ivan and I do frontend development with a solid background in engineering.",
+        "thirdParagraph": "I love building interactive user experiences on the web.",
+        "fourthParagraph": "I believe as engineers we can create things that could potentially change the world for the better.",
+        "point": "Available for work suggestions"
+      }
+    },
+    "projects": {
+      "title": "FEATURED WORKS",
+      "tabs": {
+        "all": "all",
+        "landingPages": "Landing pages",
+        "javaScript": "JS",
+        "vue": "Vue.JS",
+        "react": "React.JS"
+      },
+      "buttons": {
+        "view": "Click here to view live version",
+        "code": "View Github"
+      }
     }
   },
   "components": {
@@ -17,7 +39,11 @@
         "telegram": "Telegram me",
         "email": "Email me"
       },
-      "signature": "DESIGN BY @SVETLANA_UST" 
+      "signature": "DESIGN BY @SVETLANA_UST",
+      "message": {
+        "error": "Something went wrong!",
+        "success": "Email address copied successfully!"
+      } 
     }
   }
 }

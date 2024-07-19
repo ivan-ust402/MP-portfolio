@@ -16,15 +16,4 @@
   padding-right: 32px;
     
   }
-  &__text {
-    padding-bottom: 205px;
-  }
-  &__suggestion {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
-  &__point > circle {
-    fill: var(--secondary-color);
-  }
 }
