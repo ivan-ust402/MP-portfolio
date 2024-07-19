@@ -2,13 +2,15 @@ import React from 'react'
 import styles from './about.module.scss'
 import { AboutRightSidebar } from 'src/components'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export const About = () => {
+  const { t } = useTranslation()
   return (
     <div className={styles.about}>
       <div className={styles.about__main}>
         <div className={styles.about__content}>
-          <h1>Frontend Developer</h1>
+          <h1>{t('screens.about.title')}</h1>
           <div className={styles.about__text}>
             <p>function showSkills() {'{'}</p>
             <p>&nbsp;&nbsp;const skills = {'['}</p>

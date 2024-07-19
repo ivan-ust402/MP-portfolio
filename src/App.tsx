@@ -1,26 +1,16 @@
 import { RouterProvider } from 'react-router-dom'
 import 'src/App.scss'
 import { router } from './router'
-// import { Toggle } from 'src/components/Toggle/Toggle'
-// import { themes, useTheme } from 'src/services/ThemeService'
+import React from 'react'
+import { ThemeProvider } from 'src/services/ThemeService'
+import { I18nProvider } from './services/i18n/I18nService'
 
 export const App = () => {
-  // const { theme, setTheme } = useTheme()
   return (
-    <RouterProvider router={router}/>
+    <I18nProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </I18nProvider>
   )
 }
-
-{/* <>
-<h1>Porfolio</h1>
-<h2>Title h2</h2>
-<p>Porfolio text</p>
-<p className="small-text">Portfolio small text</p>
-<Toggle
-  onChange={() => {
-    if (theme === themes.light) { setTheme(themes.dark) }
-    if (theme === themes.dark) { setTheme(themes.light) }
-  }}
-  value={theme === themes.dark}
-/>
-</> */}

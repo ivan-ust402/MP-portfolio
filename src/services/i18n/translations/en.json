@@ -1,0 +1,12 @@
+{
+  "screens": {
+    "about": {
+      "title": "FRONTEND DEVELOPER"
+    }
+  },
+  "components": {
+    "leftSidebar": {
+      
+    }
+  }
+}

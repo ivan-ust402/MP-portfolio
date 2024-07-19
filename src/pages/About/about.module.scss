@@ -1,6 +1,7 @@
 .about {
   display: flex;
   flex-direction: row;
+  min-height: 100vh;
   &__main {
     flex: 3;
     padding-top: 60px;
