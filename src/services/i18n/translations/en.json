@@ -6,7 +6,18 @@
   },
   "components": {
     "leftSidebar": {
-      
+      "darkSwitch": "Switch to dark mode",
+      "lightSwitch": "Switch to light mode",
+      "nav": {
+        "about": "About",
+        "projects": "Projects",
+        "contacts": "Contacts"
+      },
+      "tabs": {
+        "telegram": "Telegram me",
+        "email": "Email me"
+      },
+      "signature": "DESIGN BY @SVETLANA_UST" 
     }
   }
 }

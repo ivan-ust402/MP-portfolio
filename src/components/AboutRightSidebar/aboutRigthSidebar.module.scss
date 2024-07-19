@@ -6,12 +6,17 @@
   padding-right: 32px;
   border-left: 1px solid var(--primary-color);
   min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  // &__text {
-
-  // }
+  
+  &__wrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 144px);
+  }
+  &__text {
+    padding-bottom: 205px;
+  }
   &__suggestion {
     display: flex;
     gap: 12px;

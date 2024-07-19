@@ -96,15 +96,15 @@ $transition-time: .5s;
   // &__description {    
   // }
   &__text {
-    width: 65px;
+    width: 75px;
     display: flex;
     flex-wrap: wrap;
     opacity: 0.5;
   }
   &__arrow {
     position: absolute;
-    top: 38px;
-    left: 65px;
+    top: 28px;
+    left: 75px;
     opacity: 0;
     transition: all $transition-time ease;
     &_active {

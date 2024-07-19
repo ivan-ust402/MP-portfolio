@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 300px;
+  padding-bottom: 20px;
   &__wrapper {
     display: flex;
     align-items: flex-start;
@@ -11,27 +12,30 @@
   &__link {
     text-decoration: none;
     text-align: center;
-    transition: all .0s ease;
+    transition: all .5s ease;
     &::before{
       content: '\a0';
       color: var(--background-color);
+      transition: all .5s ease;
     }
     &::after{
       content: '\a0';
       color: var(--background-color);
+      transition: all .5s ease;
     }
   }
   &__activeLink {
     align-items: center;
-    transition: all .0s ease;
+    transition: all .5s ease;
     &::before{
       content: '[';
       color: var(--primary-color);
+      transition: all .5s ease;
     }
     &::after{
       content: ']';
       color: var(--primary-color);
-
+      transition: all .5s ease;
     }
   }
   &__select {
@@ -44,7 +48,7 @@
   }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1650px) {
   .nav {
     flex-direction: column;
     gap: 10px;

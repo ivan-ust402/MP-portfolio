@@ -1,7 +1,23 @@
 {
   "screens": {
     "about": {
-      "title": "ФРОНТЕНД РАЗРАБОТЧИК"
+      "title": "FRONTEND DEVELOPER"
+    }
+  },
+  "components": {
+    "leftSidebar": {
+      "darkSwitch": "Включить темную тему",
+      "lightSwitch": "Включить светлую тему",
+      "nav": {
+        "about": "Обо мне",
+        "projects": "Проекты",
+        "contacts": "Контакты"
+      },
+      "tabs": {
+        "telegram": "Телеграм",
+        "email": "Email"
+      },
+      "signature": "DESIGN BY @SVETLANA_UST" 
     }
   }
 }

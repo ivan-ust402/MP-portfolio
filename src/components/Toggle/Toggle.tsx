@@ -3,6 +3,7 @@ import lightArrow from 'src/assets/img/light_arrow.svg'
 import darkArrow from 'src/assets/img/dark_arrow.svg'
 import nightDeveloper from 'src/assets/img/dark_man.svg'
 import dayDeveloper from 'src/assets/img/light_man.svg'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
   onChange: () => void,
@@ -10,11 +11,12 @@ interface Props {
 }
 
 export const Toggle = ({ value, onChange }: Props) => {
+  const { t } = useTranslation()
   return (
     <div className={styles.toggle}>
       <div className={styles.toggle__description}>
         <div className={styles.toggle__text}>
-          <p className='small-text'>Switch to dark mode</p>
+          {!value ? <p className='small-text'>{t('components.leftSidebar.darkSwitch')}</p> : <p className='small-text'>{t('components.leftSidebar.lightSwitch')}</p>}
         </div>
         <img className={value ? styles.toggle__arrow : `${styles.toggle__arrow} ${styles.toggle__arrow_active}`} src={lightArrow} alt="arrow" />
         <img className={!value ? styles.toggle__arrow : `${styles.toggle__arrow} ${styles.toggle__arrow_active}`} src={darkArrow} alt="arrow" />
