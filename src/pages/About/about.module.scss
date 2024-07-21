@@ -13,7 +13,7 @@
     flex-direction: column;
     gap: 130px;
     justify-content: space-between;
-    border-right: 1px solid #222;
+    border-right: 1px solid var(--primary-color);
   }
   &__content {
     display: flex;

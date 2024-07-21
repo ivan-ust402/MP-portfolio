@@ -49,11 +49,11 @@ $green-color: #BAF415;
   --btn-border-hover-color: #f9f9f9;
 
   --btn-secondary-bg-color: #222222;
-  --btn-secondary-bg-hover-color: #BAF415;
+  --btn-secondary-bg-hover-color: #FAFF12;
   --btn-secondary-text-hover-color: #222222;
   --btn-secondary-text-color: #f9f9f9;
-  --btn-secondary-border-color: #BAF415;
-  --btn-secondary-border-hover-color:#BAF415;
+  --btn-secondary-border-color: #f9f9f9;
+  --btn-secondary-border-hover-color:#FAFF12;
 
   --drop-color: #222222;
   --drop-color-hover: #222222;
@@ -136,6 +136,8 @@ a {
   display: flex;
   justify-content: center;
   transition: all .5s ease;
+  box-shadow: none;
+  outline: none;
   @media (hover: hover) {
     &:hover {
       background-color: var(--btn-bg-hover-color);
@@ -163,12 +165,17 @@ a {
   transition: all .5s ease;
   opacity: 0.7;
   font-size: 12px;
+  transition: all .5s ease;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
 
   @media (hover: hover) {
     &:hover {
       background-color: var(--btn-secondary-bg-hover-color);
       border: 1px solid var(--btn-secondary-border-hover-color);
       color: var(--btn-secondary-text-hover-color);
+      opacity: 1;
     }
   }
   @media (hover: none) {
@@ -176,12 +183,14 @@ a {
       background-color: var(--btn-secondary-bg-hover-color);
       border: 1px solid var(--btn-secondary-border-hover-color);
       color: var(--btn-secondary-text-hover-color);
+      opacity: 1;
     }
   }
 }
 
 .tab {
   padding: 4px 6px;
+  box-shadow: none;
   background-color: var(--btn-secondary-bg-color);
   color: var(--btn-secondary-text-color);
   border: 1px solid var(--btn-secondary-border-color);
@@ -194,11 +203,53 @@ a {
   width: fit-content;
 }
 
+.link {
+  box-sizing: border-box;
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  position: relative;
+  &::after {
+    margin-top: 3px;
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    content: "";
+    transition: width 0.5s ease-out;
+  }
+  &:focus::after {
+    width: 100%;
+  }
+  @media (hover: hover) {
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  @media (hover: none) {
+    &:active::after {
+      width: 100%;
+    }
+  }
+}
+
+
 @media (max-width: 1023px) {
   h1 {
     font-size: 48px;
   }
   h2 {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 28px;
   }
 }

@@ -18,7 +18,6 @@
     gap: 24px;
   }
   &__item {
-
     &::before {
       content: "- ";
     }
@@ -26,6 +25,8 @@
   &__tabs {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 4px;
+    padding-top: 8px;
   }
 }

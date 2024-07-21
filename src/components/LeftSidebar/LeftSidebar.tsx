@@ -16,7 +16,7 @@ export const LeftSidebar = () => {
       setErrorCopyText('')
       await navigator.clipboard.writeText(text)
       setSuccessCopyText(t('components.leftSidebar.message.success'))
-    
+
       await new Promise((res) => setTimeout(res, 1500))
       setSuccessCopyText('')
     } catch (error) {
@@ -39,8 +39,8 @@ export const LeftSidebar = () => {
         />
         <div className={styles.leftSidebar__downControlsBlock}>
           <div className={styles.leftSidebar__tabs}>
-            <a className={styles.leftSidebar__link} href='https://t.me/IvanUst_nsk'>[{ t('components.leftSidebar.tabs.telegram') }]</a>
-            <a className={styles.leftSidebar__link} onClick={() => copyTextToClipboard('Vangold915@gmail.com')}>[{ t('components.leftSidebar.tabs.email') }]</a>
+            <a className='link' href='https://t.me/IvanUst_nsk' target='_blank' rel='noopener noreferrer'>[{t('components.leftSidebar.tabs.telegram')}]</a>
+            <a className='link' onClick={() => copyTextToClipboard('Vangold915@gmail.com')}>[{t('components.leftSidebar.tabs.email')}]</a>
             <div className={styles.leftSidebar__message}>
               {
                 errorCopyText && <p className={styles.leftSidebar__error}>{errorCopyText}</p>}
@@ -50,7 +50,7 @@ export const LeftSidebar = () => {
             </div>
           </div>
           <div className={styles.leftSidebar__designerSignature}>
-            <p className='small-text'>[{ t('components.leftSidebar.signature') }]</p>
+            <p className='small-text'>[{t('components.leftSidebar.signature')}]</p>
           </div>
         </div>
       </div>

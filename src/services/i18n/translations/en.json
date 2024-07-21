@@ -17,8 +17,8 @@
         "all": "all",
         "landingPages": "Landing pages",
         "javaScript": "JS",
-        "vue": "Vue.JS",
-        "react": "React.JS"
+        "vue": "VueJS",
+        "react": "ReactJS"
       },
       "buttons": {
         "view": "Click here to view live version",
@@ -52,6 +52,12 @@
         "error": "Something went wrong!",
         "success": "Email address copied successfully!"
       } 
+    },
+    "card": {
+      "tabs": {
+        "viewLive": "Click here to view live version",
+        "viewCode": "View Github"
+      }
     }
   }
 }
