@@ -2,17 +2,29 @@ import { useTranslation } from 'react-i18next'
 import styles from './projectsFilters.module.scss'
 
 interface Props {
-  projectsFilter: string
+  projectsFilter: string,
+  setError: (value: string) => void,
+  setLoading: (value: boolean) => void,
   setProjectsFilter: (value: string) => void
 }
 
-export const ProjectsFilters = ({ projectsFilter, setProjectsFilter }: Props) => {
+export const ProjectsFilters = ({ projectsFilter, setProjectsFilter, setLoading,  setError }: Props) => {
   const { t } = useTranslation()
   const btns = ['all', 'landingPages', 'javaScript', 'vue', 'react']
 
-  const setFilterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const target = e.currentTarget.dataset.name || 'all'
-    setProjectsFilter(target)
+  const setFilterHandler = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    try {
+      setLoading(true)
+      setError('')
+      const target = e.currentTarget.dataset.name || 'all'
+      await new Promise(res => setTimeout(res, 1000))
+      setLoading(false)
+      setProjectsFilter(target)
+    } catch (err) {
+      setLoading(false)
+      setError('Something went wrong!!!')
+    }
+
   }
 
   return (

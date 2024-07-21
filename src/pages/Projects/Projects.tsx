@@ -3,7 +3,7 @@ import styles from './projects.module.scss';
 import { ProjectsRightSidebar } from 'src/components/ProjectsRightSidebar/ProjectsRightSidebar';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from 'src/components/ProjectCard/ProjectCard';
-import { ProjectsFilters } from 'src/components';
+import { Error, Loader, ProjectsFilters } from 'src/components';
 
 const cards = [
   {
@@ -70,8 +70,10 @@ export const Projects = () => {
       setError('')
       await new Promise((res) => setTimeout(res, 1000))
       setProjects(cards)
+      setLoading(false)
     } catch (err) {
       console.log(err)
+      setLoading(false)
       setError('Something went wrong!')
     }
   }
@@ -85,22 +87,32 @@ export const Projects = () => {
         <div className={styles.projects__content}>
           <div className={styles.projects__titleBlock}>
             <h2>{t('screens.projects.title')}</h2>
-            <ProjectsFilters projectsFilter={filter} setProjectsFilter={setFilter} />
+            <ProjectsFilters
+              projectsFilter={filter}
+              setProjectsFilter={setFilter}
+              setLoading={setLoading}
+              setError={setError}
+            />
           </div>
-          <div className={styles.projects__cards}>
+          {loading && <Loader />}
+          {error && <Error />}
+          {
+            !loading
+            && !error
+            && <div className={styles.projects__cards}>
             {
               filter === 'all'
-                ? projects
-                  .map((item, index) => (
-                    <ProjectCard {...item} key={index} />
-                  ))
-                : cards
-                  .filter(item => item.filter.toLowerCase() === filter.toLowerCase())
-                  .map((item, index) => (
-                    <ProjectCard {...item} key={index} />
-                  ))}
-
+              ? projects
+                .map((item, index) => (
+                  <ProjectCard {...item} key={index} />
+                ))
+              : cards
+                .filter(item => item.filter.toLowerCase() === filter.toLowerCase())
+                .map((item, index) => (
+                  <ProjectCard {...item} key={index} />
+                ))}
           </div>
+          }
         </div>
       </div>
       <div className={styles.projects__rightSidebar}>
