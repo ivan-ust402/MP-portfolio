@@ -4,7 +4,7 @@
   min-height: 100vh;
   position: relative;
   &__main {
-    flex: 3;
+    flex: 2;
     padding-top: 60px;
     padding-right: 24px;
     padding-left: 24px;
@@ -13,6 +13,7 @@
     flex-direction: column;
     gap: 130px;
     justify-content: space-between;
+    border-right: 1px solid #222;
   }
   &__content {
     display: flex;
@@ -23,5 +24,8 @@
     p {
       opacity: 0.5;
     }
+  }
+  &__rightSidebar {
+    flex: 1;
   }
 }

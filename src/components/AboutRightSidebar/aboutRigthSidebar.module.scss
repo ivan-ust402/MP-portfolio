@@ -4,7 +4,6 @@
   padding-bottom: 84px;
   padding-left: 32px;
   padding-right: 32px;
-  border-left: 1px solid var(--primary-color);
   min-width: 300px;
   
   &__wrapper {
@@ -13,8 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 144px);
-  padding-right: 32px;
-    
+    padding-right: 32px;
   }
   &__text {
     padding-bottom: 205px;

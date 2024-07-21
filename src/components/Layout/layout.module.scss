@@ -2,8 +2,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  &__leftSidebar {
+    flex: 1;
+  }
   &__main {
-    flex: 4;
+    flex: 3;
     border-left: 1px solid var(--primary-color);
     min-height: 100%;
   }

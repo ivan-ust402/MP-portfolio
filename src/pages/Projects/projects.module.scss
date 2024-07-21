@@ -1,0 +1,46 @@
+.projects {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  position: relative;
+  &__main {
+    flex: 2;
+    padding-top: 60px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 84px;
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+    justify-content: space-between;
+    border-right: 1px solid var(--primary-color);
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+  &__titleBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__filters {
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 12px;
+    flex-wrap: wrap;
+    align-self: end;
+    min-width: 249px;
+  }
+  &__activeTab {
+    background-color: var(--btn-secondary-bg-hover-color);
+    border: 1px solid var(--btn-secondary-border-hover-color);
+    color: var(--btn-secondary-text-hover-color);
+  }
+  &__rightSidebar {
+    flex: 1;
+  }
+}

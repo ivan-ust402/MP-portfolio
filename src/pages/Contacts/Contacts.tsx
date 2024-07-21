@@ -9,7 +9,9 @@ export const Contacts = () => {
           Contacts
         </div>
       </div>
-      <ContactsRightSidebar />
+      <div className={styles.contactss__rightSidebar}>
+        <ContactsRightSidebar />
+      </div>
     </div>
   )
 }

@@ -31,7 +31,9 @@ export const About = () => {
         </div>
         <Link className={`${styles.about__btn} primary-btn text`} to={'projects'}>[{t('screens.about.button')}]</Link>
       </div>
-      <AboutRightSidebar />
+      <div className={styles.about__rightSidebar}>
+        <AboutRightSidebar />
+      </div>
     </div>
   )
 }

@@ -23,6 +23,14 @@
       "buttons": {
         "view": "Click here to view live version",
         "code": "View Github"
+      },
+      "rightSidebar": {
+        "firstParagraph": "Development and maintenance of web applications using modern technologies;",
+        "secondParagraph": "Working with databases, writing SQL queries;",
+        "thirdParagraph": "Creating server-side and client-side parts of applications (understanding of computer networks at the OSI model layers and TCP/IP stack);",
+        "fourthParagraph": "Optimization and improvement of web application performance;",
+        "fifthParagraph": "Testing and debugging code;",
+        "sixthParagraph": "Working with version control system Git."
       }
     }
   },
