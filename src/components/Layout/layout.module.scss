@@ -5,12 +5,15 @@
   width: 100%;
   padding-left: calc(50% - 720px);
   padding-right: calc(50% - 720px);
+  box-sizing: border-box;
   &__leftSidebar {
     flex: 1;
+    box-sizing: border-box;
   }
   &__main {
     flex: 3;
     border-left: 1px solid var(--primary-color);
     min-height: 100%;
+    box-sizing: border-box;
   }
 }

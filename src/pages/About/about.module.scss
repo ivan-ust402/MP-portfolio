@@ -1,3 +1,25 @@
+@keyframes cursor {
+  0% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--primary-color);
+  }
+
+  100% {
+    border-color: transparent;
+    border-right: none;
+  }
+}
+
+@keyframes printed {
+  from {
+    width: 0;
+  }
+}
+
+
 .about {
   display: flex;
   flex-direction: row;
@@ -24,8 +46,26 @@
     p {
       opacity: 0.5;
     }
+    &_hidden {
+      visibility: hidden;
+    }
   }
   &__rightSidebar {
     flex: 1;
+  }
+
+  &__typing {
+    width: 50.5ch;
+    white-space: nowrap; /* не переносить текст на другую строку */
+    overflow: hidden; /* скрываем переполнение контентом */
+    border-right: 3px solid transparent; /* рисуем курсор */
+    animation: cursor 0.75s step-end 1, printed 2s steps(50);
+  }
+  &__typingEnd {
+    width: 2.5ch;
+    white-space: nowrap; /* не переносить текст на другую строку */
+    overflow: hidden; /* скрываем переполнение контентом */
+    border-right: 3px solid transparent; /* рисуем курсор */
+    animation: cursor 0.75s step-end infinite, printed 2s steps(2);
   }
 }
