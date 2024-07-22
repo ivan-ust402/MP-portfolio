@@ -1,15 +1,16 @@
 .rightSidebar {
-  padding-top: 60px;
-  padding-bottom: 84px;
+  // padding-top: 60px;
+  // padding-bottom: 84px;
   padding-left: 32px;
   padding-right: 32px;
   min-width: 300px;
-  
-  &__wrapper {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-right: 32px;
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  height: 100vh;
+  &__item {
+    opacity: 0.4;
   }
 }

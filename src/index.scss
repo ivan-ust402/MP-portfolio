@@ -28,6 +28,13 @@ $green-color: #BAF415;
   --btn-secondary-border-color: #222222;
   --btn-secondary-border-hover-color:#222222;
 
+  --btn-third-bg-color: #222222;
+  --btn-third-bg-hover-color: #BAF415;
+  --btn-third-text-hover-color: #222222;
+  --btn-third-text-color: #f9f9f9;
+  --btn-third-border-color: #222222;
+  --btn-third-border-hover-color:#BAF415;
+
   --drop-color: #222222;
   --drop-color-hover: #222222;
   --drop-bg: #f9f9f9;
@@ -54,6 +61,13 @@ $green-color: #BAF415;
   --btn-secondary-text-color: #f9f9f9;
   --btn-secondary-border-color: #f9f9f9;
   --btn-secondary-border-hover-color:#FAFF12;
+
+  --btn-third-bg-color: #222222;
+  --btn-third-bg-hover-color: #FAFF12;
+  --btn-third-text-hover-color: #222222;
+  --btn-third-text-color: #f9f9f9;
+  --btn-third-border-color: #f9f9f9;
+  --btn-third-border-hover-color:#FAFF12;
 
   --drop-color: #222222;
   --drop-color-hover: #222222;
@@ -99,7 +113,13 @@ h2 {
   color: var(--primary-color);
   transition: all .5s ease;
 }
-.text {
+.text, 
+p, 
+button, 
+a,
+input,
+form,
+div {
   font-family: $primary-font, 'monospace';
   font-optical-sizing: auto;
   font-weight: 400;
@@ -124,6 +144,10 @@ h2 {
 a {
   text-decoration: none;
   color: var(--primary-color);
+  font-size: 16px;
+}
+button {
+  font-size: 16px;
 }
 
 .primary-btn {
@@ -138,6 +162,7 @@ a {
   transition: all .5s ease;
   box-shadow: none;
   outline: none;
+  cursor: pointer;
   @media (hover: hover) {
     &:hover {
       background-color: var(--btn-bg-hover-color);
@@ -184,6 +209,35 @@ a {
       border: 1px solid var(--btn-secondary-border-hover-color);
       color: var(--btn-secondary-text-hover-color);
       opacity: 1;
+    }
+  }
+}
+
+.third-btn {
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: var(--btn-third-bg-color);
+  color: var(--btn-third-text-color);
+  border: 1px solid var(--btn-third-border-color);
+  display: flex;
+  justify-content: center;
+  transition: all .5s ease;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--btn-third-bg-hover-color);
+      border: 1px solid var(--btn-third-border-hover-color);
+      color: var(--btn-third-text-hover-color);
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      background-color: var(--btn-third-bg-hover-color);
+      border: 1px solid var(--btn-third-border-hover-color);
+      color: var(--btn-third-text-hover-color);
     }
   }
 }

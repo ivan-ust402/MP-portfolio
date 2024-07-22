@@ -1,10 +1,16 @@
 import React from 'react'
 import styles from './contactsRigthSidebar.module.scss';
 
+
 export const ContactsRightSidebar = () => {
+  const technologyArray = [
+    'VS', 'Code', 'GitHub', 'JavaScript', 'HTML5', 'CSS3', 'Git', 'OOP', 'C/C++', 'React', 'Gulp', 'Redux', 'ReactJS', 'Webpack', 'SOLID', 'ES6', 'Redux-Saga', 'Redux-thunk', 'C#', 'TypeScript', 'Code', 'Refactoring', 'MySQL', 'Linux', 'Python', 'Java', 'Docker', 'Sass', 'Less', 'Bootstrap', 'Jest', 'Firebase', 'Parcel', 'Gulp', 'Webpack', 'Materialize', 'CSS', 'SPA', 'PWA'
+  ]
   return (
     <div className={styles.rightSidebar}>
-      erer
+      {technologyArray.map((item, index) => (
+        <p className={`${styles.rightSidebar__item} text`} key={index}>{item}</p>
+      ))}
     </div>
   )
 }

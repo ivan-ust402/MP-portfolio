@@ -1,4 +1,5 @@
 export * from './AboutRightSidebar/AboutRightSidebar'
+export * from './ContactsButtons/ContactsButtons'
 export * from './ContactsRightSidebar/ContactsRightSidebar'
 export * from './Error/Error'
 export * from './LanguageSelector/LanguageSelector'

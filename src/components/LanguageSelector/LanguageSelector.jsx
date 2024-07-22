@@ -31,7 +31,7 @@ export default function LanguageSelector() {
           })}
         </ul>
       </div>
-      <div className={`${styles.selector__wrapper} ${ active ? styles.selector__wrapper_active : ''}`} onClick={() => closeMenuHandler()}></div>
+      {active && <div className={`${styles.selector__wrapper} ${ active ? styles.selector__wrapper_active : ''}`} onClick={() => closeMenuHandler()}></div>}
     </>
 
   )

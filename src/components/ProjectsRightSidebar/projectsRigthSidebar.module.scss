@@ -1,21 +1,25 @@
 .rightSidebar {
   padding-top: 60px;
   padding-bottom: 84px;
-  padding-left: 32px;
+  padding-left: 32px; 
   padding-right: 32px;
   min-width: 300px;
   &__wrapper {
     position: fixed;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: space-between;
-    padding-right: 32px;
+    justify-content: center;
+    padding-right: calc(50% - 720px);
+    // height: 100vh;
   }
   &__list {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    justify-content: center;
+    flex: 1;
   }
   &__item {
     &::before {
