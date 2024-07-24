@@ -17,7 +17,7 @@ export const ProjectsFilters = ({ projectsFilter, setProjectsFilter, setLoading,
       setLoading(true)
       setError('')
       const target = e.currentTarget.dataset.name || 'all'
-      await new Promise(res => setTimeout(res, 1000))
+      await new Promise(res => setTimeout(res, 500))
       setLoading(false)
       setProjectsFilter(target)
     } catch (err) {

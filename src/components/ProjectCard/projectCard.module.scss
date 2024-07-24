@@ -7,6 +7,7 @@
    position: relative;
    min-height: 40px;
    width: 100%;
+   border: 1px solid var(--primary-color);
    img {
     width: 100%;
    }
@@ -16,6 +17,7 @@
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
     padding-left: 16px;
     padding-right: 16px;
@@ -24,9 +26,19 @@
   }
   &__title {
     color: #222;
-    opacity: 0.7;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid var(--background-color);
   }
-  &__tabs {
+  &__titleText {
+    opacity: 0.7;
+    color: var(--background-color);
+  }
+  &__links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,9 +47,14 @@
   }
   &__tab {
     color: #222;
-    border: 1px solid #222;
+    border: 1px solid var(--background-color);
     opacity: 1;
     background-color: transparent;
+    opacity: 1;
+    background-color: var(--primary-color);
+  }
+  &__tabText {
+    color: var(--background-color);
     opacity: 0.7;
   }
 }

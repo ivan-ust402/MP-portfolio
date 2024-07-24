@@ -63,7 +63,8 @@
     "card": {
       "tabs": {
         "viewLive": "Перейти на сайт",
-        "viewCode": "Посмотреть код на Github"
+        "viewCode": "Посмотреть код на Github",
+        "viewReadme": "Открыть описание проекта"
       }
     }
   }

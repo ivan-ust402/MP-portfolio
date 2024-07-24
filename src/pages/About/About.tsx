@@ -39,8 +39,8 @@ export const About = () => {
             <p id='animate' className={styles.about__text_hidden}>function showSkills() {'{'}</p>
             <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;const skills = {'['}</p>
             <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`HTML`, `CSS`, `JavaScript`, `React`, `Git`, </p>
-            <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`ООП`, `C/C++`, `React`, `Gulp`, `Redux`,</p>
-            <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`ReactJS`, `Webpack`, `SOLID`, `ES6`, </p>
+            <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`OOP`, `C/C++`, `React`, `Gulp`, `Redux`,</p>
+            <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`Redux-toolkit`, `Webpack`, `SOLID`, `ES6`, </p>
             <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`Redux-Saga`, `Redux-thunk`, `C#`,</p>
             <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`TypeScript`,  `MySQL`, `Linux`, `Python`,</p>
             <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;&nbsp;&nbsp;`Java`, `Docker`, `Sass`, `Less`, `Bootstrap`, </p>

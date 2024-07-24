@@ -63,7 +63,8 @@
     "card": {
       "tabs": {
         "viewLive": "Click here to view live version",
-        "viewCode": "View Github"
+        "viewCode": "View Github",
+        "viewReadme": "Click here to view README file"
       }
     }
   }
