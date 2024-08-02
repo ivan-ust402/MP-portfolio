@@ -74,7 +74,7 @@ const cards = [
     filter: 'vue',
     imgName: 'Interno.jpg',
     projectTitle: 'Interno Website',
-    liveVersion: false,
+    liveVersion: true,
     viewLiveSrc: 'https://gb-vue-js.vercel.app/projects',
     viewCodeSrc: 'https://github.com/ivan-ust402/GB-Vue.js/tree/main/project-vue-cli-refactoring'
   },
@@ -95,6 +95,51 @@ const cards = [
     liveVersion: true,
     viewLiveSrc: 'https://ivan-ust402.github.io/MP-clothes-store-landing/',
     viewCodeSrc: 'https://github.com/ivan-ust402/MP-clothes-store-landing'
+  },
+  {
+    filterTitle: 'JS',
+    filter: 'javaScript',
+    imgName: 'quess-game.jpg',
+    projectTitle: 'Guess the number game',
+    liveVersion: true,
+    viewLiveSrc: 'https://ivan-ust402.github.io/MP-game-quess/',
+    viewCodeSrc: 'https://github.com/ivan-ust402/MP-game-quess'
+  },
+  {
+    filterTitle: 'JS',
+    filter: 'javaScript',
+    imgName: 'snakeGame.jpg',
+    projectTitle: 'Snake game',
+    liveVersion: true,
+    viewLiveSrc: 'https://ivan-ust402.github.io/MP-snake-game/',
+    viewCodeSrc: 'https://github.com/ivan-ust402/MP-snake-game'
+  },
+  {
+    filterTitle: 'JS',
+    filter: 'javaScript',
+    imgName: 'genPassword.jpg',
+    projectTitle: 'Password generator app',
+    liveVersion: true,
+    viewLiveSrc: 'https://ivan-ust402.github.io/MP-gen-password/',
+    viewCodeSrc: 'https://github.com/ivan-ust402/MP-gen-password'
+  },
+  {
+    filterTitle: 'JS',
+    filter: 'javaScript',
+    imgName: 'elusiveBallGame.jpg',
+    projectTitle: 'The elusive ball game',
+    liveVersion: true,
+    viewLiveSrc: 'https://ivan-ust402.github.io/MP-elusive-ball-game/',
+    viewCodeSrc: 'https://github.com/ivan-ust402/MP-elusive-ball-game'
+  },
+  {
+    filterTitle: 'JS',
+    filter: 'javaScript',
+    imgName: 'ticTacToeGame.jpg',
+    projectTitle: 'Tic tac toe game',
+    liveVersion: true,
+    viewLiveSrc: 'https://ivan-ust402.github.io/MP-tic-tac-toe-game/',
+    viewCodeSrc: 'https://github.com/ivan-ust402/MP-tic-tac-toe-game'
   }
 ]
 
