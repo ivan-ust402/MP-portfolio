@@ -1,10 +1,37 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect, useRef } from 'react'
 import styles from './languageSelector.module.scss'
 import i18next from 'i18next'
 
 export default function LanguageSelector() {
+  let breakpoint = 1023
   const [active, setActive] = useState(false)
   const [language, setLanguage] = useState(i18next.language)
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > breakpoint)
+  const isDesktopRef = useRef(null)
+  isDesktopRef.value = isDesktop
+  console.log('isDesktop', isDesktop)
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  const handleResize = useCallback((event) => {
+    const size = event.target.innerWidth
+    if (size > breakpoint) {
+      if (!isDesktopRef.value) {
+        setIsDesktop(true)
+        isDesktopRef.value = true
+      }
+    } else {
+      if (isDesktopRef.value) {
+        setIsDesktop(false)
+        isDesktopRef.value = false
+      }
+    }
+  }, [isDesktop])
 
   const openMenuHandler = useCallback(() => {
     setActive(true)
@@ -18,6 +45,8 @@ export default function LanguageSelector() {
     setLanguage(item)
     setActive(false)
   }, [])
+
+ 
 
   return (
     <>
