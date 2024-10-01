@@ -68,15 +68,26 @@
     padding-left: 32px;
     position: fixed;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    padding-left: calc(50% - 480px);
+    padding-right: calc(50% - 480px);
     flex: 1;
-    min-width: none;
-    z-index: 2;
     box-sizing: border-box;
+    background-color: var(--background-color);
     &__wrapper {
       position: relative;
       flex: 1;
       min-width: 300px;
+      width: 100%;
+    }
+    &__toggle {
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      transform: translate(-45%, -50%);
     }
     &__tabs {
       display: flex;

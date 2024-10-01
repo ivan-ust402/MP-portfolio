@@ -12,15 +12,17 @@ export const LeftSidebar = () => {
     <div className={styles.leftSidebar__wrapper}>
       <div className={styles.leftSidebar}>
         <Navigation />
-        <Toggle
-          onChange={() => {
-            if (theme === themes.light) { setTheme(themes.dark) }
-            if (theme === themes.dark) { setTheme(themes.light) }
-          }}
-          value={theme === themes.dark}
-        />
+        <div className={styles.leftSidebar__toggle}>
+          <Toggle
+            onChange={() => {
+              if (theme === themes.light) { setTheme(themes.dark) }
+              if (theme === themes.dark) { setTheme(themes.light) }
+            }}
+            value={theme === themes.dark}
+          />
+        </div>
         <div className={styles.leftSidebar__downControlsBlock}>
-          <ContactsButtons parentKey={'leftSidebar'}/>
+          <ContactsButtons parentKey={'leftSidebar'} />
           <div className={styles.leftSidebar__designerSignature}>
             <p className='small-text'>[{t('components.leftSidebar.signature')}]</p>
           </div>

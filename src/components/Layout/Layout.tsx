@@ -4,6 +4,7 @@ import { LeftSidebar } from 'src/components'
 import { TabletHeader } from '../TabletHeader/TabletHeader'
 
 export const Layout = () => {
+
   return (
     <div className={styles.layout}>
       <div className={styles.layout__header}>
@@ -14,6 +15,9 @@ export const Layout = () => {
           <LeftSidebar />
         </div>
         <main className={styles.layout__main}>
+          <div className={styles.layout__burgerMenu}>
+            <LeftSidebar />
+          </div>
           <Outlet />
         </main>
       </div>

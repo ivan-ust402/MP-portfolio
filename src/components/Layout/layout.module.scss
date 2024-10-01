@@ -18,6 +18,9 @@
     flex: 1;
     box-sizing: border-box;
   }
+  &__burgerMenu {
+    display: none;
+  }
   &__main {
     flex: 3;
     border-left: 1px solid var(--primary-color);
@@ -38,6 +41,11 @@
     }
     &__leftSidebar {
       display: none;
+    }
+    &__burgerMenu {
+      display: flex;
+      z-index: 2;
+      min-height: 100vh;
     }
     &__main {
       border: none;
