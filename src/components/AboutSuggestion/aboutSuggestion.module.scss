@@ -1,0 +1,31 @@
+.suggestion {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  &__point > circle {
+    fill: var(--secondary-color);
+  }
+}
+@media (max-width: 1024px) {
+  .suggestion {
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  .suggestion {
+    p {
+      font-size: 10px;
+    }
+  }
+}
+@media (max-width: 415px) {
+  .suggestion {
+    p {
+      font-size: 8px;
+    }
+  }
+}
+

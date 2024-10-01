@@ -34,7 +34,7 @@ export const About = () => {
     <div className={styles.about}>
       <div className={styles.about__main}>
         <div className={styles.about__content}>
-          <h1>{t('screens.about.title')}</h1>
+          <h1 className={styles.about__title}>{t('screens.about.title')}</h1>
           <div id='code' className={styles.about__text}>
             <p id='animate' className={styles.about__text_hidden}>function showSkills() {'{'}</p>
             <p id='animate' className={styles.about__text_hidden}>&nbsp;&nbsp;const skills = {'['}</p>

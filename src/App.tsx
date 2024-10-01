@@ -13,9 +13,9 @@ export const App = () => {
   const dispatch = useAppDispatch()
   if (desktop === null) {
     dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
+
   }
   const desktopRef = useRef<null|boolean>(null)
-  desktopRef.current = desktop
 
   const handleResize = useCallback(() => {
     const size = window.innerWidth
@@ -30,7 +30,7 @@ export const App = () => {
         desktopRef.current = false
       }
     }
-  }, [desktop])
+  }, [dispatch, firstBreakpoint, setDesktopResolution])
   
   useEffect(() => {
     window.addEventListener('resize', handleResize)
@@ -39,7 +39,6 @@ export const App = () => {
     }
   }, [handleResize])
  
-
   return (
     <I18nProvider>
       <ThemeProvider>

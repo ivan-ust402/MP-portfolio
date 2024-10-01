@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding-left: 56px;
+  padding-right: 56px;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 76px;
+  border-bottom: 1px solid var(--primary-color);
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  z-index: 2;
+  gap: 56px;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    width: 100%;
+    text-wrap: nowrap;
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+    &__title {
+      text-wrap: wrap;   
+    }
+  }
+}
+@media (max-width: 585px) {
+  .header {
+    gap: 10px;
+  }
+}

@@ -17,12 +17,40 @@
   &__text {
     padding-bottom: 205px;
   }
-  &__suggestion {
-    display: flex;
-    gap: 12px;
-    align-items: center;
+  // &__suggestion {
+  //   display: flex;
+  //   gap: 12px;
+  //   align-items: center;
+  // }
+  // &__point > circle {
+  //   fill: var(--secondary-color);
+  // }
+}
+
+@media (max-width: 1024px) {
+  .rightSidebar {
+    flex: auto;
+    padding-top: 80px;
+    padding-bottom: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-width: 300px;
+    box-sizing: border-box;
+    &__wrapper {
+      position: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: fit-content;
+      padding-right: 0;
+      gap: 0;
+    }
+    &__text {
+      padding-bottom: 0;
+    }
+    &__suggestion {
+      display: none;
+    }
   }
-  &__point > circle {
-    fill: var(--secondary-color);
-  }
+  
 }
