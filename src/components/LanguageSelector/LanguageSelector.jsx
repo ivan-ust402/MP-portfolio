@@ -1,15 +1,30 @@
 import React, { useCallback, useState } from 'react'
 import styles from './languageSelector.module.scss'
 import i18next from 'i18next'
+// import { useAppDispatch, useAppSelector } from 'src/hooks/redux'
+import { useAppSelector } from 'src/hooks/redux'
+// import { burgerSlice } from 'src/store/reducers/BurgerSlice'
 
 export default function LanguageSelector() {
   const [active, setActive] = useState(false)
   const [language, setLanguage] = useState(i18next.language)
-  
+  const { desktop } = useAppSelector((state) => state.resolution)
+  // const { burgerMenuStatus } = useAppSelector((state) => state.burgerMenuStatus)
+  // const dispatch = useAppDispatch()
+  // const {changeBurgerStatus} = burgerSlice.actions
+
 
   const openMenuHandler = useCallback(() => {
-    setActive(true)
-  }, [])
+    
+    if (desktop) {
+      setActive(true)
+    } else {{
+        onChangeLanguage(language === 'ru' ? 'en' : 'ru')
+        // dispatch(changeBurgerStatus(false))
+      }
+    }
+      
+  }, [desktop, language])
   const closeMenuHandler = useCallback(() => {
     setActive(false)
   }, [])
@@ -19,13 +34,12 @@ export default function LanguageSelector() {
     setLanguage(item)
     setActive(false)
   }, [])
-
  
 
   return (
     <>
       <div className={styles.selector}>
-        <button className={`${styles.selector__button} text ${!active ? '' : styles.selector__button_active}`} onClick={openMenuHandler}>
+        <button className={`${styles.selector__button} ${!active ? '' : styles.selector__button_active}`} onClick={openMenuHandler}>
           {language}
         </button>
         <ul className={active ? `${styles.selector__dropMenu} ${styles.selector__dropMenu_active}` : styles.selector__dropMenu}>

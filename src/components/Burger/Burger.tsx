@@ -11,7 +11,6 @@ const Burger = () => {
   const burgerMenuHandler = () => {
     dispatch(changeBurgerStatus(!burgerMenuStatus))
   }
-  console.log(burgerMenuStatus)
   return (
     <div className={styles.burger} onClick={burgerMenuHandler}>
       <span className={burgerMenuStatus? `${styles.burger__item} ${styles.active}` : styles.burger__item}></span>

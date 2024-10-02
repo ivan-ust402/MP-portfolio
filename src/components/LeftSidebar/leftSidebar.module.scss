@@ -70,7 +70,13 @@
     border-left: 1px solid var(--primary-color);
     border-right: 1px solid var(--primary-color);
     background-color: var(--background-color);
+    min-height: calc(100vh - 76px);
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__downControlsBlock {
+      width: fit-content;
       display: flex;
       flex-direction: column;
       gap: 17px;
@@ -83,9 +89,14 @@
       padding-left: calc(50% - 480px);
       padding-right: calc(50% - 480px);
       z-index: 1;
+      max-height: 100vh;
     }
     &__toggle {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: -75px;
     }
     &__tabs {
       display: flex;

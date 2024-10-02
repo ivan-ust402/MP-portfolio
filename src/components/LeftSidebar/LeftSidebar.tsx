@@ -1,17 +1,14 @@
 
 import styles from './leftSidebar.module.scss'
 import { ContactsButtons, Navigation, Toggle } from 'src/components'
-// import { Navigation } from 'src/components'
 import { themes, useTheme } from 'src/services/ThemeService'
-// import { useTheme } from 'src/services/ThemeService'
 import { useTranslation } from 'react-i18next'
-import { useAppDispatch, useAppSelector } from 'src/hooks/redux'
+import { useAppDispatch} from 'src/hooks/redux'
 import { burgerSlice } from 'src/store/reducers/BurgerSlice'
 
 export const LeftSidebar = () => {
   const { theme, setTheme } = useTheme()
   const { t } = useTranslation()
-  const {burgerMenuStatus} = useAppSelector(state => state.burgerMenuStatus)
   const dispatch = useAppDispatch()
   const {changeBurgerStatus} = burgerSlice.actions
 

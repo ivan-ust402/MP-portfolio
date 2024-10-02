@@ -3,6 +3,10 @@ $secondary-font: 'actay_widebold';
 $yellow-color: #FAFF12;
 $green-color: #BAF415;
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 * {
  box-sizing: border-box;
  padding: 0;

@@ -6,14 +6,22 @@ import { ThemeProvider } from 'src/services/ThemeService'
 import { I18nProvider } from './services/i18n/I18nService'
 import { useAppDispatch, useAppSelector } from './hooks/redux'
 import { resolutionSlice } from './store/reducers/ResolutionSlice'
+import { burgerSlice } from './store/reducers/BurgerSlice'
 
 export const App = () => {
+  const dispatch = useAppDispatch()
   const { desktop, firstBreakpoint } = useAppSelector((state) => state.resolution)
   const { setDesktopResolution } = resolutionSlice.actions
-  const dispatch = useAppDispatch()
+  const { burgerMenuStatus } =useAppSelector((state) => state.burgerMenuStatus)
+  const { changeBurgerStatus } = burgerSlice.actions
+
+
   if (desktop === null) {
     dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
+  }
 
+  if (desktop === null || desktop) {
+    dispatch(changeBurgerStatus(false))
   }
   const desktopRef = useRef<null|boolean>(null)
 
