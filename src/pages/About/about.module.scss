@@ -73,6 +73,19 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .about {
+    &__title {
+        font-size: 44px;
+    }
+    &__text {
+      p {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .about {
     flex-direction: column-reverse;

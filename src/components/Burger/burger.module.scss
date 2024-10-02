@@ -33,31 +33,42 @@
     &::after {
       top: 16px;
     }
-  }
-  @media (hover: hover) {
-    &:hover .burger__item {
-      background-color: transparent;
-    }
-    &:hover .burger__item::before {
-      transform: rotate(45deg);
-      top: 0;
-    }
-    &:hover .burger__item::after {
-      transform: rotate(135deg);
-      top: 0;
-    }
-  }
-  @media (hover: none) {
-    &:active .burger__item {
-      background-color: transparent;
-    }
-    &:active .burger__item::before {
-      transform: rotate(45deg);
-      top: 0;
-    }
-    &:active .burger__item::after {
-      transform: rotate(135deg);
-      top: 0;
-    }
-  }
+  }    
+  // @media (hover: hover) {
+  //   &:hover .burger__item {
+  //     background-color: transparent;
+  //   }
+  //   &:hover .burger__item::before {
+  //     transform: rotate(45deg);
+  //     top: 0;
+  //   }
+  //   &:hover .burger__item::after {
+  //     transform: rotate(135deg);
+  //     top: 0;
+  //   }
+  // }
+  // @media (hover: none) {
+  //   &:active .burger__item {
+  //     background-color: transparent;
+  //   }
+  //   &:active .burger__item::before {
+  //     transform: rotate(45deg);
+  //     top: 0;
+  //   }
+  //   &:active .burger__item::after {
+  //     transform: rotate(135deg);
+  //     top: 0;
+  //   }
+  // }
 }
+  .active{
+    background-color: transparent;
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    &::after {
+      transform: rotate(135deg);
+      top: 0;
+    }
+  }

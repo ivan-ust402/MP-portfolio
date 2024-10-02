@@ -2,8 +2,10 @@ import { Outlet } from 'react-router-dom'
 import styles from './layout.module.scss'
 import { LeftSidebar } from 'src/components'
 import { TabletHeader } from '../TabletHeader/TabletHeader'
+import { useAppSelector } from 'src/hooks/redux'
 
 export const Layout = () => {
+  const { burgerMenuStatus } = useAppSelector((state) => state.burgerMenuStatus)
 
   return (
     <div className={styles.layout}>
@@ -15,10 +17,13 @@ export const Layout = () => {
           <LeftSidebar />
         </div>
         <main className={styles.layout__main}>
-          {/* <div className={styles.layout__burgerMenu}>
-            <LeftSidebar />
-          </div> */}
-          <Outlet />
+          {
+            burgerMenuStatus ?
+              <div className={styles.layout__burgerMenu}>
+                <LeftSidebar />
+              </div>
+              : <Outlet />
+          }
         </main>
       </div>
     </div>

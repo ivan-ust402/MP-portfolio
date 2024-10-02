@@ -1,12 +1,15 @@
 .card {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 11px;
   &__imgBlock {
+    box-sizing: border-box;
    display: flex;
    position: relative;
    min-height: 40px;
-   width: 100%;
    border: 1px solid var(--primary-color);
    img {
     width: 100%;
