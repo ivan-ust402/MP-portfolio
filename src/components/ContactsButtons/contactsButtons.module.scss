@@ -33,19 +33,12 @@
   padding: 10px;
 }
 
-@media (max-width: 1024px) {
-  .tabs {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    padding-top: 26px;
-    width: 100%;
-  }
-  
+@media (max-width: 1024px) {  
   .btns {
     display: flex;
-    flex-direction: column;
-    gap: 0;
+    flex-direction: row;
+    gap: 32px;
+    max-width: 960px;
     position: relative;
     text-wrap: nowrap;
     justify-content: space-between;
@@ -53,12 +46,12 @@
   
   .message {
     position: absolute;
-    bottom: 23px;
-    max-width: 90px;
-    right: 0;
-    bottom: 50%;
+    max-width: 45px;
+    right: 50px;
+    bottom: 65px;
     display: flex;
     justify-content: center;
+    text-wrap: wrap;
   }
   .error {
     background-color: red;
@@ -68,5 +61,17 @@
     background-color: var(--secondary-color);
     color: var(--background-color);
     padding: 10px;
+  }
+}
+
+@media (max-width: 960px) {
+  .btns {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btns {
+    gap: 12px;
   }
 }

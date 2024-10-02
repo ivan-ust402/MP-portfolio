@@ -3,6 +3,7 @@
   flex-direction: row;
   min-height: 100vh;
   position: relative;
+  
   &__main {
     flex: 2;
     padding-top: 60px;
@@ -14,7 +15,7 @@
     gap: 130px;
     justify-content: center;
     border-right: 1px solid var(--primary-color);
-
+    transition: none;
   }
   &__content {
     display: flex;
@@ -36,5 +37,49 @@
   &__rightSidebar {
     display: flex;
     flex: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts {
+    max-width: 960px;
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    min-height: calc(100vh - 76px);
+    &__main {
+      flex: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      border-right: none;
+      z-index: 2;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      max-width: 960px;
+      width: 100vw;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    &__rightSidebar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
   }
 }

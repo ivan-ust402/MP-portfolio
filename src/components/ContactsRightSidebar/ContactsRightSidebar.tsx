@@ -4,7 +4,7 @@ import styles from './contactsRigthSidebar.module.scss';
 
 export const ContactsRightSidebar = () => {
   const technologyArray = [
-    'VS', 'Code', 'GitHub', 'JavaScript', 'HTML5', 'CSS3', 'Git', 'OOP', 'C/C++', 'React', 'Gulp', 'Redux', 'ReactJS', 'Webpack', 'SOLID', 'ES6', 'Redux-Saga', 'Redux-thunk', 'C#', 'TypeScript', 'Code', 'Refactoring', 'MySQL', 'Linux', 'Python', 'Java', 'Docker', 'Sass', 'Less', 'Bootstrap', 'Jest', 'Firebase', 'Parcel', 'Gulp', 'Webpack', 'Materialize', 'CSS', 'SPA', 'PWA'
+    'VS', 'Code', 'GitHub', 'JavaScript', 'HTML5', 'CSS3', 'Git', 'OOP', 'C/C++', 'React', 'Gulp', 'Redux', 'ReactJS', 'Webpack', 'SOLID', 'ES6', 'Redux-Saga', 'Redux-thunk', 'C#', 'TypeScript', 'Code', 'Refactoring', 'MySQL', 'Linux', 'Python', 'Java', 'Docker', 'Sass', 'Less', 'Bootstrap', 'Jest', 'Firebase', 'Gulp', 'Webpack', 'Materialize', 'CSS', 'SPA', 'PWA', 'Redux-Toolkit', 'VueJS', 'React-Router-Rom', 'Vuex', 'Axios', 'Software Architecture', 'Agile', 'Computer Network', 'VS', 'Code', 'GitHub', 'JavaScript', 'HTML5', 'CSS3', 'Git', 'OOP', 'C/C++', 'React', 'Gulp', 'Redux', 'ReactJS', 'Webpack', 'SOLID', 'ES6', 'Redux-Saga', 'Redux-thunk', 'C#', 'TypeScript', 'Code', 'Refactoring', 'MySQL', 'Linux', 'Python'
   ]
   return (
     <div className={styles.rightSidebar}>

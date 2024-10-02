@@ -4,11 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { ContactsButtons } from 'src/components';
 // import { useEffect, useState } from 'react';
 import i18next from 'i18next';
+import { useAppSelector } from 'src/hooks/redux';
 
 
 export const Contacts = () => {
   const { t } = useTranslation()
-  const titleHTML = ''
+  const { desktop} = useAppSelector((state) => state.resolution)
+
 
   const getTitle = () => {
     if (i18next.language === 'en') {
@@ -78,7 +80,8 @@ export const Contacts = () => {
         </div>
       </div>
       <div className={styles.contacts__rightSidebar}>
-        <ContactsRightSidebar />
+        <div className={styles.contacts__desktop}><ContactsRightSidebar /></div>
+        { !desktop && <div className={styles.contacts__tablet}><ContactsRightSidebar /></div>}
       </div>
     </div>
   )
