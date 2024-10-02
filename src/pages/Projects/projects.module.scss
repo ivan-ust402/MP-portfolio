@@ -36,3 +36,44 @@
     flex: 1;
   }
 }
+
+@media (max-width: 1024px) {
+  .projects {
+    flex-direction: column-reverse;
+    max-width: 960px;
+    min-height: 100vh;
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    gap: 0;
+    box-sizing: border-box;
+    &__main {
+      padding-top: 24px;
+      padding-right: 24px;
+      padding-left: 24px;
+      padding-bottom: 24px;
+      flex: none;
+      display: flex;
+      flex-direction: column;
+      gap: 130px;
+      justify-content: space-between;
+      border-right: none;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+    }
+    &__titleBlock {
+      gap: 0px;
+    }
+    &__title {
+      display: none;
+    }
+    &__cards {
+      gap: 48px;
+    }
+    &__rightSidebar {
+      flex: none;
+    }
+  }
+}

@@ -32,3 +32,41 @@
   color: var(--background-color);
   padding: 10px;
 }
+
+@media (max-width: 1024px) {
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 26px;
+    width: 100%;
+  }
+  
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    text-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .message {
+    position: absolute;
+    bottom: 23px;
+    max-width: 90px;
+    right: 0;
+    bottom: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .error {
+    background-color: red;
+    padding: 10px;
+  }
+  .success {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 10px;
+  }
+}

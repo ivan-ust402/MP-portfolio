@@ -34,3 +34,28 @@
     padding-top: 8px;
   }
 }
+
+@media (max-width: 1024px) {
+  .rightSidebar {
+    padding-top: 16px;
+    padding-bottom: 24px;
+    padding-left: 24px; 
+    padding-right: 24px;
+    border-bottom: 1px solid var(--primary-color);
+    &__wrapper {
+      position: relative;
+      flex: none;
+    }
+    &__list {
+      gap: 12px;
+      flex: none;
+    }
+    &__tabs {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding-top: 8px;
+    }
+  }
+}

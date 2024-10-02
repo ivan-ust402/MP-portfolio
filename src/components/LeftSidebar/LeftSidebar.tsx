@@ -1,7 +1,9 @@
 
 import styles from './leftSidebar.module.scss'
 import { ContactsButtons, Navigation, Toggle } from 'src/components'
+// import { Navigation } from 'src/components'
 import { themes, useTheme } from 'src/services/ThemeService'
+// import { useTheme } from 'src/services/ThemeService'
 import { useTranslation } from 'react-i18next'
 
 export const LeftSidebar = () => {

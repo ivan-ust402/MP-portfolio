@@ -15,9 +15,9 @@ export const Layout = () => {
           <LeftSidebar />
         </div>
         <main className={styles.layout__main}>
-          <div className={styles.layout__burgerMenu}>
+          {/* <div className={styles.layout__burgerMenu}>
             <LeftSidebar />
-          </div>
+          </div> */}
           <Outlet />
         </main>
       </div>

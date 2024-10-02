@@ -182,7 +182,7 @@ export const Projects = () => {
       <div className={styles.projects__main}>
         <div className={styles.projects__content}>
           <div className={styles.projects__titleBlock}>
-            <h2>{t('screens.projects.title')}</h2>
+            <h2 className={styles.projects__title}>{t('screens.projects.title')}</h2>
             <ProjectsFilters
               projectsFilter={filter}
               setProjectsFilter={setFilter}

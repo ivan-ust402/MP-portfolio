@@ -301,6 +301,9 @@ button {
   h2 {
     font-size: 32px;
   }
+  .secondary-btn {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -319,6 +322,9 @@ button {
 }
 @media (max-width: 480px) {
   .text {
+    font-size: 12px;
+  }
+  .link {
     font-size: 12px;
   }
 }

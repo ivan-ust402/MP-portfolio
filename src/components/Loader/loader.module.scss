@@ -4,3 +4,10 @@
   align-items: center; 
   height: 50vh;
 }
+@media (max-width: 1024px) {
+  .loader {
+    height: 100vh;
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+}
