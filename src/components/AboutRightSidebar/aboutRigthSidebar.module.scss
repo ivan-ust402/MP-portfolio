@@ -37,7 +37,7 @@
     min-width: 300px;
     box-sizing: border-box;
     &__wrapper {
-      position: inherit;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -53,4 +53,16 @@
     }
   }
   
+}
+
+@media (max-height: 800px) {
+  .rightSidebar {
+    padding-top: 40px;
+  }
+}
+
+@media (max-height: 650px) {
+  .rightSidebar {
+    padding-top: 24px;
+  }
 }

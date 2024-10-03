@@ -83,92 +83,15 @@ $transition-time: .5s;
   }
 }
 
+@media (max-width: 1024px) {
+  .toggle {
+    padding-bottom: 0px;
+  }
+}
+
 @media (max-height: 800px) {
   .toggle {
       transform: scale(0.6);
     }
-}
-
-@media (max-width: 1024px) {
-  .toggle {
-    position: relative;
-    gap: 13px;
-    height: 361px;
-    padding-bottom: 0px;
-    &__text {
-      width: 90px;
-      display: flex;
-      flex-wrap: wrap;
-      opacity: 0.5;
-    }
-    &__arrow {
-      position: absolute;
-      top: 28px;
-      left: 90px;
-      opacity: 0;
-      transition: all $transition-time ease;
-      &_active {
-        opacity: 1;
-      }
-    }
-    &__switch {
-      position: relative;
-      transition: all $transition-time ease-in-out;
-      
-      input {
-        display: none;
-      }
-      input:checked ~ .toggle__moon{
-        opacity: 1;
-        top: 25px;
-      }
-      input:checked ~ .toggle__sun{
-        opacity: 0;
-        top: -999px;
-      }
-    }
-    &__sun {
-      position: absolute;
-      opacity: 1;
-      top: 25px;
-      transition: all $transition-time ease-in-out;
-    }
-    &__moon {
-      position: absolute;
-      opacity: 0;
-      top: -999px;
-      transition: all $transition-time ease-in-out;
-    }
-    &__developer {
-      position: absolute;
-      display: flex;
-      top: 135px;
-      max-width: 234px;
-      opacity: 0;
-      transition: all $transition-time ease;
-      &_active {
-        opacity: 1;
-      }
-    }
-  
-    @media (hover: hover) {
-      &__sun:hover svg {
-        cursor: pointer;
-        fill: #FAFF12;
-      }
-      &__moon:hover path {
-        cursor: pointer;
-        fill: #f9f9f9;
-      }
-    }
-    @media (hover: none) {
-      &__sun:active svg {
-        fill: #FAFF12;
-      }
-      &__moon:active path {
-        fill: #f9f9f9;
-      }
-    }
-  }
 }
 

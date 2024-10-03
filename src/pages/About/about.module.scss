@@ -95,15 +95,17 @@
     border-right: 1px solid var(--primary-color);
     gap: 60px;
     justify-content: flex-end;
-    min-height: 100%;
+    min-height: calc(100vh - 76px);
+    max-height: 100vh;
+    box-sizing: border-box;
     &__main {
       box-sizing: border-box;
       flex: none;
       padding-bottom: 34px;
       padding-top: 0;
       border: 0;
-      gap: 122px;
-      height: 100%;
+      gap: 22px;
+      height: calc(100vh - 473px);
       justify-content: space-between;
       padding-left: 24px;
       padding-right: 24px;
@@ -142,5 +144,17 @@
         font-size: 8px;
       }
     }
+  }
+}
+
+@media (max-height: 800px) {
+  .about {
+    gap: 30px;
+  }
+}
+
+@media (max-height: 650px) {
+  .about {
+    gap: 10px;
   }
 }
