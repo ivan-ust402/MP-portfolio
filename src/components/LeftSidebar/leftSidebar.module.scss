@@ -57,6 +57,14 @@
   }
 }
 
+@media (max-height: 800px) {
+  .leftSidebar {
+    &__toggle {
+      height: 200px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .leftSidebar {
     box-sizing: border-box;
@@ -73,7 +81,6 @@
     min-height: calc(100vh - 76px);
     max-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     &__downControlsBlock {
       width: fit-content;

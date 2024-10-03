@@ -7,7 +7,7 @@ interface ResolutionState {
 
 const initialState: ResolutionState = {
   desktop: null,
-  firstBreakpoint: 1023
+  firstBreakpoint: 1024
 }
 
 export const resolutionSlice = createSlice({

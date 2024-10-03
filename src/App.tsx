@@ -12,9 +12,7 @@ export const App = () => {
   const dispatch = useAppDispatch()
   const { desktop, firstBreakpoint } = useAppSelector((state) => state.resolution)
   const { setDesktopResolution } = resolutionSlice.actions
-  const { burgerMenuStatus } =useAppSelector((state) => state.burgerMenuStatus)
   const { changeBurgerStatus } = burgerSlice.actions
-
 
   if (desktop === null) {
     dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
