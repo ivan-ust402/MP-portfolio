@@ -79,7 +79,7 @@
   }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 800px) and (max-width: 1024px) {
   .rightSidebar {
     padding-top: 12px;
     padding-bottom: 12px;

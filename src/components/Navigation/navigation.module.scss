@@ -84,14 +84,13 @@
 
 @media (max-width: 480px) {
   .nav {
-    gap: 8px;
-    padding-bottom: 8px;
+    gap: 6px;
+    padding-bottom: 6px;
     &__wrapper {
-      padding-bottom: 24px;
+      padding-bottom: 14px;
     }
     &__link {
-      padding: 8px;
-      font-size: 12px;
+      padding: 6px;
     }
   }
   

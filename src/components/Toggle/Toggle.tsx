@@ -16,7 +16,7 @@ export const Toggle = ({ value, onChange }: Props) => {
     <div className={styles.toggle}>
       <div className={styles.toggle__description}>
         <div className={styles.toggle__text}>
-          {!value ? <p className='small-text'>{t('components.leftSidebar.darkSwitch')}</p> : <p className='small-text'>{t('components.leftSidebar.lightSwitch')}</p>}
+          {!value ? <p className='text'>{t('components.leftSidebar.darkSwitch')}</p> : <p className='small-text'>{t('components.leftSidebar.lightSwitch')}</p>}
         </div>
         <img className={value ? styles.toggle__arrow : `${styles.toggle__arrow} ${styles.toggle__arrow_active}`} src={lightArrow} alt="arrow" />
         <img className={!value ? styles.toggle__arrow : `${styles.toggle__arrow} ${styles.toggle__arrow_active}`} src={darkArrow} alt="arrow" />

@@ -13,6 +13,7 @@
   min-width: none;
   z-index: 2;
   box-sizing: border-box;
+  
   // &__downControlsBlock {
   // }
   &__wrapper {
@@ -20,11 +21,21 @@
     flex: 1;
     min-width: 300px;
   }
+  &__toggle {
+    width: 100%;
+    min-height: fit-content;
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
   &__tabs {
     display: flex;
     justify-content: space-between;
     position: relative;
     padding-top: 26px;
+    flex: 1;
   }
   &__message {
     position: absolute;
@@ -57,13 +68,13 @@
   }
 }
 
-@media (max-height: 800px) {
-  .leftSidebar {
-    &__toggle {
-      height: 225px;
-    }
-  }
-}
+// @media (max-height: 800px) {
+//   .leftSidebar {
+//     &__toggle {
+//       height: 225px;
+//     }
+//   }
+// }
 
 @media (max-width: 1024px) {
   .leftSidebar {
@@ -72,7 +83,7 @@
     margin: 0;
     position: relative;
     width: 100%;
-    padding-top: 16px;
+    padding-top: 2px;
     padding-bottom: 28px;
     flex: none;
     border-left: 1px solid var(--primary-color);
@@ -104,7 +115,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      left: -75px;
     }
     &__tabs {
       display: flex;
@@ -140,6 +150,16 @@
       p {
         justify-self: center;
       }
+    }
+  }
+}
+
+
+@media (max-height: 800px) and (max-width: 1024px) {
+  .leftSidebar {
+    &__toggle {
+      min-height: 200px;
+      max-height: 200px;
     }
   }
 }
