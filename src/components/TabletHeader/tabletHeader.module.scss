@@ -13,6 +13,7 @@
   background-color: var(--background-color);
   z-index: 2;
   gap: 56px;
+  transition: all .3s ease;
   &__content {
     display: flex;
     flex-direction: row;
