@@ -81,4 +81,19 @@
   }
   
 }
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 8px;
+    padding-bottom: 8px;
+    &__wrapper {
+      padding-bottom: 8px;
+    }
+    &__link {
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
+  
+}
 @media (max-height: 950px) {}
