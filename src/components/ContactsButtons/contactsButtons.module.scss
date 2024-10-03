@@ -47,20 +47,17 @@
   .message {
     position: absolute;
     max-width: 45px;
-    right: 50px;
-    bottom: 65px;
+    right: 0;
+    bottom: 25px;
     display: flex;
     justify-content: center;
     text-wrap: wrap;
   }
   .error {
-    background-color: red;
-    padding: 10px;
+    font-size: 12px;
   }
   .success {
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-    padding: 10px;
+    font-size: 12px;
   }
 }
 
