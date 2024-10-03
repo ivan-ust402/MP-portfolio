@@ -19,13 +19,13 @@ export const ProjectCard = ({ filterTitle, imgName, projectTitle, liveVersion, v
       <div className={styles.card__imgBlock}>
         <img src={require(`src/assets/img/projectCovers/${imgName}`)} alt="Project cover" />
         <div className={styles.card__description}>
-          <div className={styles.card__title}>
+          <div className={`${styles.card__title}`}>
             <p className={`${styles.card__titleText} text`}>
               {`[${projectTitle}]`}
             </p>
           </div>
           <div className={`tab ${styles.card__tab}`}>
-            <p className={styles.card__tabText}>
+            <p className={`${styles.card__tabText} text`}>
               {filterTitle}
             </p>
           </div>

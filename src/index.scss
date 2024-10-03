@@ -320,9 +320,26 @@ button {
   h2 {
     font-size: 28px;
   }
+  .text {
+    font-size: 12px;
+  }
+  .secondary-btn {
+    padding: 2px 4px;
+    font-size: 12px;
+  }  
+  .tab {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+  .link {
+    font-size: 12px;
+  }
 }
 @media (max-width: 585px) {
   h1 {
+    font-size: 28px;
+  }
+  h2 {
     font-size: 24px;
   }
 }
@@ -336,11 +353,31 @@ button {
 }
 @media (max-width: 415px) {
   h1 {
-    font-size: 18px;
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
   }
 }
 @media (max-width: 375px) {
   h1 {
-    font-size: 16px;
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-height: 800px) {
+  .secondary-btn {
+    padding: 2px 4px;
+    font-size: 12px;
+  }  
+  .tab {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+  .link {
+    font-size: 12px;
   }
 }
