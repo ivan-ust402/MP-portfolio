@@ -133,6 +133,7 @@ div {
   font-style: normal;
   color: var(--primary-color);
   transition: all .5s ease;
+  user-select: none;
 }
 .small-text {
   font-family: $primary-font, 'monospace';
