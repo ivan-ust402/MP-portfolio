@@ -95,3 +95,11 @@ $transition-time: .5s;
     }
 }
 
+@media (min-width: 1024px) and (max-height: 800px) {
+  .toggle {
+    transform: scale(0.6);
+    top: -20%;
+    left: -10%;
+  }
+}
+
