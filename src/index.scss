@@ -142,7 +142,7 @@ div {
   font-weight: 500;
   font-size: 12px;
   line-height: auto;
-  letter-spacing: 00%;
+  letter-spacing: 0.2em;
   font-style: normal;
   color: var(--primary-color);
   transition: all .5s ease;
@@ -295,6 +295,12 @@ button {
   }
 }
 
+@media (min-width: 1400px) {
+  .small-text {
+    letter-spacing: 0.3em;
+  }
+}
+
 @media (max-width: 1200px) {
   h2 {
     font-size: 32px;
@@ -352,7 +358,7 @@ button {
     font-size: 10px;
     font-optical-sizing: auto;
     font-weight: 500;
-    letter-spacing: 0%;
+    letter-spacing: 0.3em;
     width: 100%;
   }
 }
