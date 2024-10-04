@@ -29,7 +29,6 @@
 
 @media (max-width: 1024px) {
   .rightSidebar {
-    flex: auto;
     padding-top: 80px;
     padding-bottom: 0px;
     padding-left: 24px;
@@ -38,21 +37,20 @@
     box-sizing: border-box;
     &__wrapper {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: fit-content;
       padding-right: 0;
-      gap: 0;
+      height: 100%;
+      padding-right: calc(50% - 720px);
     }
     &__text {
       padding-bottom: 0;
     }
-    &__suggestion {
-      display: none;
-    }
   }
   
+}
+@media (max-height: 1024px) {
+  .rightSidebar {
+    padding-top:50px;
+  }
 }
 
 @media (max-height: 800px) {

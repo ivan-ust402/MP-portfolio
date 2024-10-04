@@ -23,8 +23,8 @@
 .about {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
   position: relative;
+  min-height: 100vh;
   &__main {
     flex: 2;
     padding-top: 60px;
@@ -41,6 +41,8 @@
     display: flex;
     flex-direction: column;
     gap: 38px;
+    justify-content: space-between;
+    height: 50%;
   }
   &__title {
     display: flex;
@@ -88,15 +90,16 @@
 
 @media (max-width: 1024px) {
   .about {
-    flex-direction: column-reverse;
+    flex-flow: column-reverse;
     max-width: 960px;
+    min-height: 100%;
     position: relative;
     border-left: 1px solid var(--primary-color);
     border-right: 1px solid var(--primary-color);
     gap: 60px;
-    justify-content: flex-end;
-    min-height: calc(100vh - 76px);
-    max-height: 100vh;
+    justify-content: space-between;
+    min-height: 100%;
+    max-height: 100%;
     box-sizing: border-box;
     &__main {
       box-sizing: border-box;
@@ -105,10 +108,11 @@
       padding-top: 0;
       border: 0;
       gap: 22px;
-      height: calc(100vh - 473px);
+      // min-height: 100%;
+      // max-height: 100%;
+      min-height: calc(100vh - 400px);
+      max-height: calc(100vh - 720px);
       justify-content: space-between;
-      padding-left: 24px;
-      padding-right: 24px;
     }
     &__title {
       display: none;
@@ -150,11 +154,16 @@
 @media (max-height: 800px) {
   .about {
     gap: 30px;
+    
   }
 }
 
 @media (max-height: 650px) {
   .about {
     gap: 10px;
+    &__main {
+      min-height: 100%;
+      max-height: 100%;
+    }
   }
 }

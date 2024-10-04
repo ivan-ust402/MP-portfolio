@@ -24,7 +24,7 @@
   &__main {
     flex: 3;
     border-left: 1px solid var(--primary-color);
-    min-height: 100vh;
+    // min-height: 100vh;
     box-sizing: border-box;
   }
 }
@@ -51,11 +51,12 @@
     &__main {
       border: none;
       padding-top: 76px;
-      max-height: 100vh;
+      // max-height: 100vh;
       box-sizing: border-box;
       padding-left: calc(50% - 480px);
       padding-right: calc(50% - 480px);
       width: 100vw;
+      min-height: 100vh;
     }
   }
 }
