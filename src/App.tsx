@@ -41,7 +41,7 @@ export const App = () => {
       : window.innerHeight
     ))
     document.documentElement.style.setProperty('--vpheight', `${height}px`)
-  }, [dispatch, setViewportHeight])
+  }, [dispatch, height, setViewportHeight])
 
   const handleResize = useCallback(() => {
     const size = window.innerWidth

@@ -97,10 +97,10 @@
     border-right: 1px solid var(--primary-color);
     gap: 60px;
     justify-content: space-between;
-    // min-height: 100%;
-    // max-height: 100%;
-    min-height: calc(100% - var(--vpheight));
+    min-height: 100%;
     max-height: 100%;
+    // min-height: var(--vpheight);
+    // max-height: 100%;
     box-sizing: border-box;
     &__main {
       box-sizing: border-box;

@@ -55,8 +55,8 @@
       padding-left: calc(50% - 480px);
       padding-right: calc(50% - 480px);
       width: 100vw;
-      min-height: 100vh;
-      // min-height: var(--vpheight);
+      // min-height: 100vh;
+      min-height: var(--vpheight);
     }
   }
 }
