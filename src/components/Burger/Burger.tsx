@@ -10,6 +10,7 @@ const Burger = () => {
 
   const burgerMenuHandler = () => {
     dispatch(changeBurgerStatus(!burgerMenuStatus))
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
   }
   return (
     <div className={styles.burger} onClick={burgerMenuHandler}>
