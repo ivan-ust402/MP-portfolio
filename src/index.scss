@@ -295,7 +295,13 @@ button {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1651px) {
+  .small-text {
+    letter-spacing: 0.4em;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1650px) {
   .small-text {
     letter-spacing: 0.3em;
   }

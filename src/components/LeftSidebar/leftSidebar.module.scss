@@ -76,8 +76,7 @@
 //     }
 //   }
 // }
-
-@media (min-width: 1400px) {
+@media (min-width: 1651px) {
   .leftSidebar {
     &__designerSignature {
       opacity: 0.5;
@@ -85,7 +84,25 @@
       width: 100%;
       margin-top: 17px;
       line-height: normal;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.4em;
+      justify-content: flex-start;
+      p {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1650px) {
+  .leftSidebar {
+    &__designerSignature {
+      opacity: 0.5;
+      display: flex;
+      width: 100%;
+      margin-top: 17px;
+      line-height: normal;
+      letter-spacing: 0.4em;
       justify-content: flex-start;
       p {
         display: flex;
