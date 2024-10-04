@@ -8,6 +8,7 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop'
 export const Layout = () => {
   const { burgerMenuStatus } = useAppSelector((state) => state.burgerMenuStatus)
   const { height } = useAppSelector(state => state.viewportHeight)
+  console.log(height)
   return (
     <div className={styles.layout} style={{ height: `${height}px`}}>
       <ScrollToTop />

@@ -12,10 +12,18 @@ import { viewportHeightSlice } from './store/reducers/ViewportHeightSlice'
 export const App = () => {
   const dispatch = useAppDispatch()
   const { desktop, firstBreakpoint } = useAppSelector((state) => state.resolution)
+  const { height } = useAppSelector(state => state.viewportHeight)
   const { setDesktopResolution } = resolutionSlice.actions
   const { changeBurgerStatus } = burgerSlice.actions
   const { setViewportHeight } = viewportHeightSlice.actions
 
+  if (height === 0) {
+    dispatch(setViewportHeight(
+      window.visualViewport 
+      ? window.visualViewport.height
+      : window.innerHeight
+    ))
+  }
   if (desktop === null) {
     dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
   }
@@ -25,14 +33,17 @@ export const App = () => {
   }
   const desktopRef = useRef<null|boolean>(null)
 
-  const handleResize = useCallback(() => {
-    const size = window.innerWidth
-     dispatch(setViewportHeight(
+  const handleSetHeight = useCallback(() => {
+    dispatch(setViewportHeight(
       window.visualViewport 
       ? window.visualViewport.height
       : window.innerHeight
     ))
-    
+  }, [dispatch, setViewportHeight])
+
+  const handleResize = useCallback(() => {
+    const size = window.innerWidth
+
     if (size > firstBreakpoint) {
       if (!desktopRef.current) {
         dispatch(setDesktopResolution(true))
@@ -44,14 +55,16 @@ export const App = () => {
         desktopRef.current = false
       }
     }
-  }, [dispatch, firstBreakpoint, setDesktopResolution, setViewportHeight])
+  }, [dispatch, firstBreakpoint, setDesktopResolution])
   
   useEffect(() => {
     window.addEventListener('resize', handleResize)
+    window.visualViewport?.addEventListener('resize', handleSetHeight)
     return () => {
       window.removeEventListener('resize', handleResize)
+      window.visualViewport?.removeEventListener('resize', handleSetHeight);
     }
-  }, [handleResize])
+  }, [handleResize, handleSetHeight])
  
   return (
     <I18nProvider>
