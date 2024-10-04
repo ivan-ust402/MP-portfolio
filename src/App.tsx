@@ -25,6 +25,11 @@ export const App = () => {
 
   const handleResize = useCallback(() => {
     const size = window.innerWidth
+    
+    // Проба с размером высотыф
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+    
     if (size > firstBreakpoint) {
       if (!desktopRef.current) {
         dispatch(setDesktopResolution(true))
