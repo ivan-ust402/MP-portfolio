@@ -8,9 +8,9 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop'
 export const Layout = () => {
   const { burgerMenuStatus } = useAppSelector((state) => state.burgerMenuStatus)
   const { height } = useAppSelector(state => state.viewportHeight)
-  console.log(height)
+
   return (
-    <div className={styles.layout} style={{ height: `${height}px`}}>
+    <div className={styles.layout}>
       <ScrollToTop />
       <div className={styles.layout__header}>
         <TabletHeader />
@@ -19,7 +19,7 @@ export const Layout = () => {
         <div className={styles.layout__leftSidebar}>
           <LeftSidebar />
         </div>
-        <main className={styles.layout__main}>
+        <main className={styles.layout__main} style={{ height: `${height}px`}}>
           {
             burgerMenuStatus ?
               <div className={styles.layout__burgerMenu}>
