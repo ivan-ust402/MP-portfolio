@@ -1,11 +1,13 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { resolutionSlice } from './reducers/ResolutionSlice';
 import { burgerSlice } from './reducers/BurgerSlice';
+import { viewportHeightSlice } from './reducers/ViewportHeightSlice';
 
 // 1. Создаем корневой редьюсер
 export const rootReducer = combineReducers({
   resolution: resolutionSlice.reducer,
-  burgerMenuStatus: burgerSlice.reducer
+  burgerMenuStatus: burgerSlice.reducer,
+  viewportHeight: viewportHeightSlice.reducer
 })
 
 // 2. Создаем хранилище

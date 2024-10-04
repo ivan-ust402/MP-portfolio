@@ -7,12 +7,14 @@ import { I18nProvider } from './services/i18n/I18nService'
 import { useAppDispatch, useAppSelector } from './hooks/redux'
 import { resolutionSlice } from './store/reducers/ResolutionSlice'
 import { burgerSlice } from './store/reducers/BurgerSlice'
+import { viewportHeightSlice } from './store/reducers/ViewportHeightSlice'
 
 export const App = () => {
   const dispatch = useAppDispatch()
   const { desktop, firstBreakpoint } = useAppSelector((state) => state.resolution)
   const { setDesktopResolution } = resolutionSlice.actions
   const { changeBurgerStatus } = burgerSlice.actions
+  const { setViewportHeight } = viewportHeightSlice.actions
 
   if (desktop === null) {
     dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
@@ -25,10 +27,11 @@ export const App = () => {
 
   const handleResize = useCallback(() => {
     const size = window.innerWidth
-    
-    // Проба с размером высотыф
-    const vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty('--vh', `${vh}px`)
+     dispatch(setViewportHeight(
+      window.visualViewport 
+      ? window.visualViewport.height
+      : window.innerHeight
+    ))
     
     if (size > firstBreakpoint) {
       if (!desktopRef.current) {
@@ -41,7 +44,7 @@ export const App = () => {
         desktopRef.current = false
       }
     }
-  }, [dispatch, firstBreakpoint, setDesktopResolution])
+  }, [dispatch, firstBreakpoint, setDesktopResolution, setViewportHeight])
   
   useEffect(() => {
     window.addEventListener('resize', handleResize)

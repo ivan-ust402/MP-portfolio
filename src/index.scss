@@ -98,10 +98,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-color);
   transition: all .5s ease;
-
-  
-  height: 100vh;
-  height: calc(var(--vh, 1vh)*100);
 }
 
 h1 {
