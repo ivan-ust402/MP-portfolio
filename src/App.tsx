@@ -23,6 +23,7 @@ export const App = () => {
       ? window.visualViewport.height
       : window.innerHeight
     ))
+    document.documentElement.style.setProperty('--vpheight', `${height}px`)
   }
   if (desktop === null) {
     dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
@@ -39,6 +40,7 @@ export const App = () => {
       ? window.visualViewport.height
       : window.innerHeight
     ))
+    document.documentElement.style.setProperty('--vpheight', `${height}px`)
   }, [dispatch, setViewportHeight])
 
   const handleResize = useCallback(() => {
