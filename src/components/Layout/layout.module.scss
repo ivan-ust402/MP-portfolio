@@ -46,7 +46,7 @@
     &__burgerMenu {
       display: flex;
       z-index: 2;
-      max-height: 100vh;
+      max-height: var(--vpheight);
     }
     &__main {
       border: none;
