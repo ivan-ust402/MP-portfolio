@@ -6,22 +6,22 @@ interface Props {
   parentKey: string
 }
 
-export const ContactsButtons = ({parentKey}: Props) => {
+export const ContactsButtons = ({ parentKey }: Props) => {
   const [successCopyText, setSuccessCopyText] = useState('')
   const [errorCopyText, setErrorCopyText] = useState('')
   const { t } = useTranslation()
-  const wrapperStyleName = 
-  parentKey === 'leftSidebar' && styles.tabs 
-  || styles.btns
-  const linkStyleName = 
-  parentKey === 'leftSidebar' && 'link' 
-  || 'third-btn'
-  const telegramBtnText = 
-  parentKey === 'leftSidebar' && 'components.leftSidebar.tabs.telegram' 
-  || 'screens.contacts.buttons.telegram'
-  const emailBtnText = 
-  parentKey === 'leftSidebar' && 'components.leftSidebar.tabs.email' 
-  || 'screens.contacts.buttons.email'
+  const wrapperStyleName =
+    parentKey === 'leftSidebar' && styles.tabs
+    || styles.btns
+  const linkStyleName =
+    parentKey === 'leftSidebar' && 'link'
+    || 'third-btn'
+  const telegramBtnText =
+    parentKey === 'leftSidebar' && 'components.leftSidebar.tabs.telegram'
+    || 'screens.contacts.buttons.telegram'
+  const emailBtnText =
+    parentKey === 'leftSidebar' && 'components.leftSidebar.tabs.email'
+    || 'screens.contacts.buttons.email'
 
   const copyTextToClipboard = async (text: string) => {
     try {
@@ -42,12 +42,12 @@ export const ContactsButtons = ({parentKey}: Props) => {
       <a className={linkStyleName} href='https://t.me/IvanUst_nsk' target='_blank' rel='noopener noreferrer'>[{t(telegramBtnText)}]</a>
       <a className={linkStyleName} onClick={() => copyTextToClipboard('Vangold915@gmail.com')}>[{t(emailBtnText)}]</a>
       <div className={styles.message}>
-        {
-          errorCopyText && <p className={styles.error}>{errorCopyText}</p>}
-        {
-          successCopyText && <p className={styles.success}>{successCopyText}</p>
-        }
-      </div>
+          {
+            errorCopyText && <p className={styles.error}>{errorCopyText}</p>}
+          {
+            successCopyText && <p className={styles.success}>{successCopyText}</p>
+          }
+        </div>
     </div>
   );
 }

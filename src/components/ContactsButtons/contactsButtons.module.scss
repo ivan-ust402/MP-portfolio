@@ -4,6 +4,17 @@
   position: relative;
   padding-top: 26px;
   width: 100%;
+  // background-color: red;
+  .message {
+    position: absolute;
+    max-width: 90px;
+    right: 3%;
+    top: -200%;
+    bottom: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
 }
 
 .btns {
@@ -12,17 +23,20 @@
   gap: 32px;
   position: relative;
   width: 100%;
+  // background-color: violet;
+  .message {
+    position: absolute;
+    max-width: 80px;
+    right: 10%;
+    top: -20%;
+    bottom: 50%;
+    display: flex;
+    justify-content: center;
+    
+  }
 }
 
-.message {
-  position: absolute;
-  bottom: 23px;
-  max-width: 90px;
-  right: 0;
-  bottom: 50%;
-  display: flex;
-  justify-content: center;
-}
+
 .error {
   background-color: red;
   padding: 10px;
@@ -34,6 +48,24 @@
 }
 
 @media (max-width: 1024px) {  
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 26px;
+    width: 100%;
+    // background-color: red;
+    .message {
+      position: absolute;
+      max-width: 90px;
+      right: 0%;
+      top: -100%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      
+    }
+  }
   .btns {
     display: flex;
     flex-direction: row;
@@ -42,16 +74,17 @@
     position: relative;
     text-wrap: nowrap;
     justify-content: space-between;
-  }
-  
-  .message {
-    position: absolute;
-    max-width: 45px;
-    right: 0;
-    bottom: 25px;
-    display: flex;
-    justify-content: center;
-    text-wrap: wrap;
+    .message {
+      position: absolute;
+      max-width: 80px;
+      right: 10%;
+      top: -180%;
+      bottom: 120%;
+      display: flex;
+      justify-content: center;
+      text-wrap: wrap;
+      
+    }
   }
   .error {
     font-size: 12px;
