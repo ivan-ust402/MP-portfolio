@@ -80,8 +80,8 @@ export const Contacts = () => {
         </div>
       </div>
       <div className={styles.contacts__rightSidebar}>
-        <div className={styles.contacts__desktop}><ContactsRightSidebar /></div>
-        { !desktop && <div className={styles.contacts__tablet}><ContactsRightSidebar /></div>}
+        <div className={styles.contacts__desktop}><ContactsRightSidebar position='standart'/></div>
+        { !desktop && <div className={styles.contacts__tablet}><ContactsRightSidebar position='right'/></div>}
       </div>
     </div>
   )
