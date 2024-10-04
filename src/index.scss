@@ -142,10 +142,11 @@ div {
   font-weight: 500;
   font-size: 12px;
   line-height: auto;
-  letter-spacing: 0%;
+  letter-spacing: 00%;
   font-style: normal;
   color: var(--primary-color);
   transition: all .5s ease;
+  text-align: justify;
 }
 a {
   text-decoration: none;
