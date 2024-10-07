@@ -56,7 +56,7 @@ export const App = () => {
     if (desktop === null || desktop) {
       dispatch(changeBurgerStatus(false))
     }
-  }, [])
+  })
   
   useEffect(() => {    
     window.addEventListener('resize', handleResize)
@@ -64,7 +64,7 @@ export const App = () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [changeBurgerStatus, desktop, dispatch, firstBreakpoint, handleResize, height, heightRef, setActualHeight, setDesktopResolution])
-  
+  console.log(heightRef.current)
  
   return (
     <I18nProvider>

@@ -98,6 +98,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-color);
   transition: all .5s ease;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -135,6 +136,7 @@ div {
   color: var(--primary-color);
   transition: all .5s ease;
   user-select: none;
+  box-sizing: border-box;
 }
 .small-text {
   font-family: $primary-font, 'monospace';
@@ -158,6 +160,7 @@ button {
 }
 
 .primary-btn {
+  box-sizing: border-box;
   width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -187,6 +190,7 @@ button {
 }
 
 .secondary-btn {
+  box-sizing: border-box;
   padding: 4px 6px;
   background-color: var(--btn-secondary-bg-color);
   color: var(--btn-secondary-text-color);
@@ -220,6 +224,7 @@ button {
 }
 
 .third-btn {
+  box-sizing: border-box;
   width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;

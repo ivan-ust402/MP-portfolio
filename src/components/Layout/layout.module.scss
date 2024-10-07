@@ -56,8 +56,8 @@
       padding-left: calc(50% - 480px);
       padding-right: calc(50% - 480px);
       width: 100vw;
-      // max-height: var(--vpheight);
-      height: var(--vpheight);
+      max-height: var(--vpheight);
+      // height: var(--vpheight);
     }
   }
 }
