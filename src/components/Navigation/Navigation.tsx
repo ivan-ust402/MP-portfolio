@@ -4,14 +4,13 @@ import { NavLink } from 'react-router-dom'
 import styles from 'src/components/Navigation/navigation.module.scss'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useTranslation } from 'react-i18next'
-import { useAppDispatch, useAppSelector } from 'src/hooks/redux'
+import { useAppDispatch } from 'src/hooks/redux'
 import { burgerSlice } from 'src/store/reducers/BurgerSlice'
 
 const setActiveClassName = ({ isActive }: { isActive: boolean }) => isActive ? `${styles.nav__activeLink} ${styles.nav__link}` : styles.nav__link
 
 export const Navigation = () => {
   const { t } = useTranslation()
-  const {burgerMenuStatus} = useAppSelector(state => state.burgerMenuStatus)
   const dispatch = useAppDispatch()
   const {changeBurgerStatus} = burgerSlice.actions
 

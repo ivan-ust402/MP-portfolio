@@ -59,11 +59,11 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -999px;
-    right: -999px;
+    left: -100vw;
+    right: -100vw;
     opacity: 0;
     min-height: 100%;
-    min-width: 1000%;
+    min-width: 100%;
     transition: all .5s ease;
     &_active {
       z-index: 1;
@@ -77,12 +77,15 @@
     justify-content: center;
     border-bottom: 1px solid var(--primary-color);
     padding: 6px;
-  }
-}
-@media (max-width: 480px) {
-  .selector {
-    &__button {
-      font-size: 16px;
+    &__wrapper {
+      display: none;
     }
   }
 }
+// @media (max-width: 480px) {
+//   .selector {
+//     &__button {
+//       font-size: 16px;
+//     }
+//   }
+// }
