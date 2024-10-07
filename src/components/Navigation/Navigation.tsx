@@ -21,7 +21,7 @@ export const Navigation = () => {
     <div className={styles.nav__wrapper}>
       <nav className={styles.nav}>
         <NavLink to='/' className={setActiveClassName}>
-          {/* {t('components.leftSidebar.nav.about')} */}
+          {t('components.leftSidebar.nav.about')}
           About
         </NavLink>
         {/* <NavLink to='/projects' className={setActiveClassName} onClick={navHandler}>
