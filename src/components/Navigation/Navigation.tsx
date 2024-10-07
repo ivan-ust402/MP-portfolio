@@ -29,7 +29,8 @@ export const Navigation = () => {
           Projects
         </NavLink>
         <NavLink to='/contacts' className={setActiveClassName} onClick={navHandler}>
-        {t('components.leftSidebar.nav.contacts')}
+        {/* {t('components.leftSidebar.nav.contacts')} */}
+          Contacts
         </NavLink>
       </nav>
       <LanguageSelector />
