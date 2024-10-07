@@ -141,7 +141,7 @@ li {
   box-sizing: border-box;
 }
 .nav-text {
-  color: var(--Dark-grey, #222);
+  color: var(--primary-color);
   font-family: $primary-font, sans-serif;
   font-size: 16px;
 }
@@ -342,9 +342,6 @@ a {
   }
   .third-btn {
     font-size: 16px;
-  }
-  .nav-text {
-    font-size: 8px;
   }
 }
 
