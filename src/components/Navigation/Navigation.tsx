@@ -20,15 +20,16 @@ export const Navigation = () => {
   return (
     <div className={styles.nav__wrapper}>
       <nav className={styles.nav}>
-        <NavLink to='/' className={setActiveClassName} onClick={navHandler}>
-          {t('components.leftSidebar.nav.about')}
+        <NavLink to='/' className={setActiveClassName}>
+          {/* {t('components.leftSidebar.nav.about')} */}
+          About
         </NavLink>
-        <NavLink to='/projects' className={setActiveClassName} onClick={navHandler}>
+        {/* <NavLink to='/projects' className={setActiveClassName} onClick={navHandler}>
         {t('components.leftSidebar.nav.projects')}
         </NavLink>
         <NavLink to='/contacts' className={setActiveClassName} onClick={navHandler}>
         {t('components.leftSidebar.nav.contacts')}
-        </NavLink>
+        </NavLink> */}
       </nav>
       <LanguageSelector />
     </div>
