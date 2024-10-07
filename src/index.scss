@@ -140,6 +140,11 @@ li {
   user-select: none;
   box-sizing: border-box;
 }
+.nav-text {
+  color: var(--Dark-grey, #222);
+  font-family: $primary-font, sans-serif;
+  font-size: 16px;
+}
 .small-text {
   font-family: $primary-font, 'monospace';
   font-optical-sizing: auto;

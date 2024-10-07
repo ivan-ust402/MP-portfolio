@@ -23,17 +23,23 @@ export const Navigation = () => {
         <ul className={styles.nav__ul}>
           <li className={styles.nav__li} onClick={navHandler}>
             <NavLink to='/' className={setActiveClassName} >
-              {t('components.leftSidebar.nav.about')}
+              <span className='nav-text'>
+                {t('components.leftSidebar.nav.about')}
+              </span>
             </NavLink>
           </li>
           <li className={styles.nav__li} onClick={navHandler}>
             <NavLink to='/projects' className={setActiveClassName} >
+            <span className='nav-text'>
               {t('components.leftSidebar.nav.projects')}
+              </span>
             </NavLink>
         </li>
           <li className={styles.nav__li} onClick={navHandler}>
             <NavLink to='/contacts' className={setActiveClassName} >
+            <span className='nav-text'>
               {t('components.leftSidebar.nav.contacts')}
+              </span>
             </NavLink>
           </li>
         </ul>      
