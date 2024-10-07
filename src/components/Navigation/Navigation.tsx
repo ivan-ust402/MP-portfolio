@@ -24,12 +24,13 @@ export const Navigation = () => {
           {/* {t('components.leftSidebar.nav.about')} */}
           About
         </NavLink>
-        {/* <NavLink to='/projects' className={setActiveClassName} onClick={navHandler}>
-        {t('components.leftSidebar.nav.projects')}
+        <NavLink to='/projects' className={setActiveClassName} onClick={navHandler}>
+        {/* {t('components.leftSidebar.nav.projects')} */}
+          Projects
         </NavLink>
         <NavLink to='/contacts' className={setActiveClassName} onClick={navHandler}>
         {t('components.leftSidebar.nav.contacts')}
-        </NavLink> */}
+        </NavLink>
       </nav>
       <LanguageSelector />
     </div>
