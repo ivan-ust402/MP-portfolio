@@ -17,21 +17,6 @@ export const App = () => {
   const { changeBurgerStatus } = burgerSlice.actions
   const { setViewportHeight } = viewportHeightSlice.actions
 
-  if (height === 0) {
-    dispatch(setViewportHeight(
-      window.visualViewport 
-      ? window.visualViewport.height
-      : window.innerHeight
-    ))
-    document.documentElement.style.setProperty('--vpheight', `${height}px`)
-  }
-  if (desktop === null) {
-    dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
-  }
-
-  if (desktop === null || desktop) {
-    dispatch(changeBurgerStatus(false))
-  }
   const desktopRef = useRef<null|boolean>(null)
 
   const handleSetHeight = useCallback(() => {
@@ -58,6 +43,22 @@ export const App = () => {
       }
     }
   }, [dispatch, firstBreakpoint, setDesktopResolution])
+
+  useEffect(() => {
+    dispatch(setViewportHeight(
+      window.visualViewport 
+      ? window.visualViewport.height
+      : window.innerHeight
+    ))
+    document.documentElement.style.setProperty('--vpheight', `${height}px`)
+    if (desktop === null) {
+      dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
+    }
+  
+    if (desktop === null || desktop) {
+      dispatch(changeBurgerStatus(false))
+    }
+  }, [])
   
   useEffect(() => {
     window.addEventListener('resize', handleResize)
