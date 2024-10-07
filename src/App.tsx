@@ -32,6 +32,7 @@ export const App = () => {
     dispatch(changeBurgerStatus(false))
   }
   const desktopRef = useRef<null|boolean>(null)
+  const heightRef = useRef<null|number>(null)
 
   const handleResize = useCallback(() => {
     const currentWidth = window.innerWidth
@@ -40,6 +41,7 @@ export const App = () => {
     : window.innerHeight
 
     setViewportHeight(currentHeight)
+    heightRef.current = currentHeight
 
     if (currentWidth > firstBreakpoint) {
       if (!desktopRef.current) {
@@ -56,12 +58,12 @@ export const App = () => {
 
   
   useEffect(() => {
-    document.documentElement.style.setProperty('--vpheight', `${height}px`)
+    document.documentElement.style.setProperty('--vpheight', `${heightRef.current}px`)
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [handleResize, height])
+  }, [handleResize, heightRef])
  
   return (
     <I18nProvider>
