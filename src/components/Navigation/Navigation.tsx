@@ -12,7 +12,7 @@ const setActiveClassName = ({ isActive }: { isActive: boolean }) => isActive ? `
 export const Navigation = () => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
-  const {changeBurgerStatus} = burgerSlice.actions
+  const { changeBurgerStatus } = burgerSlice.actions
 
   const navHandler = () => {
     dispatch(changeBurgerStatus(false))
@@ -20,18 +20,23 @@ export const Navigation = () => {
   return (
     <div className={styles.nav__wrapper}>
       <nav className={styles.nav}>
-        <NavLink to='/' className={setActiveClassName} onClick={navHandler}>
-          {/* {t('components.leftSidebar.nav.about')} */}
-          About
-        </NavLink>
-        <NavLink to='/projects' className={setActiveClassName} onClick={navHandler}>
-        {/* {t('components.leftSidebar.nav.projects')} */}
-          Projects
-        </NavLink>
-        <NavLink to='/contacts' className={setActiveClassName} onClick={navHandler}>
-        {/* {t('components.leftSidebar.nav.contacts')} */}
-          Contacts
-        </NavLink>
+        <ul className={styles.nav__ul}>
+          <li className={styles.nav__li} onClick={navHandler}>
+            <NavLink to='/' className={setActiveClassName} >
+              {t('components.leftSidebar.nav.about')}
+            </NavLink>
+          </li>
+          <li className={styles.nav__li} onClick={navHandler}>
+            <NavLink to='/projects' className={setActiveClassName} >
+              {t('components.leftSidebar.nav.projects')}
+            </NavLink>
+        </li>
+          <li className={styles.nav__li} onClick={navHandler}>
+            <NavLink to='/contacts' className={setActiveClassName} >
+              {t('components.leftSidebar.nav.contacts')}
+            </NavLink>
+          </li>
+        </ul>      
       </nav>
       <LanguageSelector />
     </div>

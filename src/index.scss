@@ -125,7 +125,9 @@ button,
 a,
 input,
 form,
-div {
+div,
+ul, 
+li {
   font-family: $primary-font, 'monospace';
   font-optical-sizing: auto;
   font-weight: 400;
