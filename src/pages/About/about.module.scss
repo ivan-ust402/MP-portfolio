@@ -97,7 +97,7 @@
     border-right: 1px solid var(--primary-color);
     gap: 60px;
     justify-content: space-between;
-    min-height: 100%;
+    min-height: fit-content;
     max-height: 100%;
     // min-height: var(--vpheight);
     // max-height: 100%;
