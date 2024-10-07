@@ -99,6 +99,8 @@ body {
   color: var(--primary-color);
   transition: all .5s ease;
   box-sizing: border-box;
+  
+  // Для исключения автоматического увеличения шрифта
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
