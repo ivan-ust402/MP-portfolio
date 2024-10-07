@@ -33,19 +33,15 @@ export const App = () => {
   }
   const desktopRef = useRef<null|boolean>(null)
 
-  const handleSetHeight = useCallback(() => {
-    dispatch(setViewportHeight(
-      window.visualViewport 
-      ? window.visualViewport.height
-      : window.innerHeight
-    ))
-    document.documentElement.style.setProperty('--vpheight', `${height}px`)
-  }, [dispatch, height, setViewportHeight])
-
   const handleResize = useCallback(() => {
-    const size = window.innerWidth
+    const currentWidth = window.innerWidth
+    const currentHeight = window.visualViewport 
+    ? window.visualViewport.height
+    : window.innerHeight
 
-    if (size > firstBreakpoint) {
+    setViewportHeight(currentHeight)
+
+    if (currentWidth > firstBreakpoint) {
       if (!desktopRef.current) {
         dispatch(setDesktopResolution(true))
         desktopRef.current = true
@@ -56,18 +52,16 @@ export const App = () => {
         desktopRef.current = false
       }
     }
-  }, [dispatch, firstBreakpoint, setDesktopResolution])
+  }, [dispatch, firstBreakpoint, setDesktopResolution, setViewportHeight])
 
   
   useEffect(() => {
     document.documentElement.style.setProperty('--vpheight', `${height}px`)
     window.addEventListener('resize', handleResize)
-    window.visualViewport?.addEventListener('resize', handleSetHeight)
     return () => {
       window.removeEventListener('resize', handleResize)
-      window.visualViewport?.removeEventListener('resize', handleSetHeight);
     }
-  }, [handleResize, handleSetHeight, height])
+  }, [handleResize, height])
  
   return (
     <I18nProvider>
