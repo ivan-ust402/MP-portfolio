@@ -45,8 +45,8 @@
     max-width: 960px;
     border-left: 1px solid var(--primary-color);
     border-right: 1px solid var(--primary-color);
-    // min-height: calc(100vh - 76px);
-    min-height: fit-content;
+    min-height: calc(100vh - 76px);
+    height: calc(100vh - 76px);
     &__main {
       flex: none;
       position: absolute;

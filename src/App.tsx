@@ -16,32 +16,21 @@ export const App = () => {
   const { setDesktopResolution } = resolutionSlice.actions
   const { changeBurgerStatus } = burgerSlice.actions
   const { setViewportHeight } = viewportHeightSlice.actions
-
-  if (height === 0) {
-    dispatch(setViewportHeight(
-      window.visualViewport 
-      ? window.visualViewport.height
-      : window.innerHeight
-    ))
-  }
-  if (desktop === null) {
-    dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
-  }
-
-  if (desktop === null || desktop) {
-    dispatch(changeBurgerStatus(false))
-  }
   const desktopRef = useRef<null|boolean>(null)
   const heightRef = useRef<null|number>(null)
 
-  const handleResize = useCallback(() => {
-    const currentWidth = window.innerWidth
+  const setActualHeight = useCallback(() => {
     const currentHeight = window.visualViewport 
     ? window.visualViewport.height
     : window.innerHeight
-
-    setViewportHeight(currentHeight)
+    dispatch(setViewportHeight(currentHeight))
     heightRef.current = currentHeight
+  }, [dispatch, setViewportHeight])
+
+  const handleResize = useCallback(() => {
+    const currentWidth = window.innerWidth
+
+    setActualHeight()
 
     if (currentWidth > firstBreakpoint) {
       if (!desktopRef.current) {
@@ -54,16 +43,28 @@ export const App = () => {
         desktopRef.current = false
       }
     }
-  }, [dispatch, firstBreakpoint, setDesktopResolution, setViewportHeight])
+  }, [dispatch, firstBreakpoint, setActualHeight, setDesktopResolution])
 
-  
   useEffect(() => {
-    document.documentElement.style.setProperty('--vpheight', `${heightRef.current}px`)
+    if (height === 0) {
+      setActualHeight()
+    }
+    if (desktop === null) {
+      dispatch(setDesktopResolution(window.innerWidth > firstBreakpoint))
+    }
+  
+    if (desktop === null || desktop) {
+      dispatch(changeBurgerStatus(false))
+    }
+  })
+  
+  useEffect(() => {    
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [handleResize, heightRef])
+  }, [changeBurgerStatus, desktop, dispatch, firstBreakpoint, handleResize, height, heightRef, setActualHeight, setDesktopResolution])
+  
  
   return (
     <I18nProvider>
