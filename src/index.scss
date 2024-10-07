@@ -99,6 +99,9 @@ body {
   color: var(--primary-color);
   transition: all .5s ease;
   box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1 {
@@ -146,7 +149,6 @@ li {
   font-size: 16px;
   box-sizing: border-box;
   max-width: fit-content;
-  background-color: red;
 }
 .small-text {
   font-family: $primary-font, 'monospace';
