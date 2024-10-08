@@ -15,7 +15,7 @@
       "title": "ПРОЕКТЫ",
       "tabs": {
         "all": "Все",
-        "landingPages": "Landing pages",
+        "html/css": "HTML/CSS",
         "javaScript": "JS",
         "vue": "VueJS",
         "react": "ReactJS"

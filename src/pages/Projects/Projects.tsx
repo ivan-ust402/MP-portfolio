@@ -88,8 +88,8 @@ const cards = [
     viewCodeSrc: 'https://github.com/ivan-ust402/MP-Game-duck-hunting'
   },
   {
-    filterTitle: 'LandingPage',
-    filter: 'landingPages',
+    filterTitle: 'HTML/CSS',
+    filter: 'HTML/CSs',
     imgName: 'clothes store.jpg',
     projectTitle: 'Clothing store landing',
     liveVersion: true,

@@ -15,7 +15,7 @@
       "title": "FEATURED WORKS",
       "tabs": {
         "all": "all",
-        "landingPages": "Landing pages",
+        "html/css": "HTML/CSS",
         "javaScript": "JS",
         "vue": "VueJS",
         "react": "ReactJS"
