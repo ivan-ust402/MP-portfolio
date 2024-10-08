@@ -18,7 +18,8 @@
         "html/css": "HTML/CSS",
         "javaScript": "JS",
         "vue": "VueJS",
-        "react": "ReactJS"
+        "react": "ReactJS",
+        "react/typescript": "ReactJS+Typescript"
       },
       "buttons": {
         "view": "Click here to view live version",

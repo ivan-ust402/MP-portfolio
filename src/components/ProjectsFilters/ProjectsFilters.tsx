@@ -10,7 +10,7 @@ interface Props {
 
 export const ProjectsFilters = ({ projectsFilter, setProjectsFilter, setLoading,  setError }: Props) => {
   const { t } = useTranslation()
-  const btns = ['all', 'html/css', 'javaScript', 'vue', 'react']
+  const btns = ['all', 'html/css', 'javaScript', 'vue', 'react', 'react/typescript']
 
   const setFilterHandler = async (e: React.MouseEvent<HTMLButtonElement>) => {
     try {

@@ -16,8 +16,17 @@ const cards = [
     viewCodeSrc: 'https://github.com/ivan-ust402/GB-graduate-work'
   },
   {
-    filterTitle: 'ReactJs',
-    filter: 'react',
+    filterTitle: 'ReactJs+Typescript',
+    filter: 'react/typescript',
+    imgName: 'portfolio main page.jpg',
+    projectTitle: 'My portfolio',
+    liveVersion: true,
+    viewLiveSrc: 'https://mp-portfolio-omega.vercel.app/',
+    viewCodeSrc: 'https://github.com/ivan-ust402/MP-portfolio'
+  },
+  {
+    filterTitle: 'ReactJs+Typescript',
+    filter: 'react/typescript',
     imgName: '1. First following a link. Redirect to sign In page.jpg',
     projectTitle: 'App with user registration and authorization',
     liveVersion: false,
@@ -34,8 +43,8 @@ const cards = [
     viewCodeSrc: 'https://github.com/ivan-ust402/MP-react-and-other-technologies-training/tree/main/MN/react-router-dom-v6'
   },
   {
-    filterTitle: 'ReactJs',
-    filter: 'react',
+    filterTitle: 'ReactJs+Typescript',
+    filter: 'react/typescript',
     imgName: '2024-05-31_19-33-52.jpg',
     projectTitle: 'React+redux toolkit+RTK query+typescript+ training App',
     liveVersion: false,
@@ -61,8 +70,8 @@ const cards = [
     viewCodeSrc: 'https://github.com/ivan-ust402/MP-react-and-other-technologies-training/tree/main/UlbiTV/react%2Bredux/react-redux-ulbitv'
   },
   {
-    filterTitle: 'ReactJs',
-    filter: 'react',
+    filterTitle: 'ReactJs+Typescript',
+    filter: 'react/typescript',
     imgName: '2024-05-29_00-48-29.jpg',
     projectTitle: 'React+redux+typescript training App',
     liveVersion: false,
@@ -79,8 +88,8 @@ const cards = [
     viewCodeSrc: 'https://github.com/ivan-ust402/GB-Vue.js/tree/main/project-vue-cli-refactoring'
   },
   {
-    filterTitle: 'JS',
-    filter: 'javaScript',
+    filterTitle: 'HTML/CSS',
+    filter: 'HTML/CSS',
     imgName: 'duck-hunting.jpg',
     projectTitle: 'Duck hunting game',
     liveVersion: true,
@@ -89,7 +98,7 @@ const cards = [
   },
   {
     filterTitle: 'HTML/CSS',
-    filter: 'HTML/CSs',
+    filter: 'HTML/CSS',
     imgName: 'clothes store.jpg',
     projectTitle: 'Clothing store landing',
     liveVersion: true,
@@ -124,8 +133,8 @@ const cards = [
     viewCodeSrc: 'https://github.com/ivan-ust402/MP-gen-password'
   },
   {
-    filterTitle: 'JS',
-    filter: 'javaScript',
+    filterTitle: 'HTML/CSS',
+    filter: 'HTML/CSS',
     imgName: 'elusiveBallGame.jpg',
     projectTitle: 'The elusive ball game',
     liveVersion: true,

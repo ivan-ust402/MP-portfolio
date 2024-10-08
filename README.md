@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Shop.Co - online store (Shop.Co - онлайн магазин)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description(RU) (Описание)
+Этот масшабный проект был выполнен в качестве моей дипломной работы, охватывающей большую часть изученных технологий и приобретенных навыков во время обучения на образовательной платформе Geekbrains.
 
-## Available Scripts
+Это полноценная фронтенд часть интернет-магазина с работающим функционалом сортировок, фильтраций, переходов, добавлений в корзину, пагинаций, с оплатой приобретенных товаров, с расчетами итоговой суммы, применением промокодов, работой с роутами, адаптивностью для трех разрешений (desktop, tablet, mobile) и т.д. Попробуйте зайти на лайв-версию и познакомиться со всем внутренним устройством и функциональностью приложения. Думаю, что поверить в то, что данный магазин работатет без бекэнда будет трудно. Пришлось хорошенько продумать на фронтенд стороне многие функциональности бэкенда. Конечно, многие решения спорные и идут вразрез парадигмам программирования, но задача была поставлена, и ее нужно было решать теми средствами, что имеются в моем арсенале знаний. Что ж, думаю этого описания будет достаточно для того, чтобы подогреть интерес к моей разработке, пора заглянуть и попробовать все возможности данного магазина: https://online-store-shop-co.vercel.app/. 
 
-In the project directory, you can run:
+## Description(En)
+This large-scale project was completed as my diploma work, covering most of the technologies studied and skills acquired during my studies on the Geekbrains educational platform.
 
-### `npm start`
+This is a full-fledged front-end part of an online store with working functionality of sorting, filtering, transitions, adding to cart, pagination, with payment for purchased goods, with calculations of the final amount, using promo codes, working with routes, adaptability for three resolutions (desktop, tablet, mobile), etc. Try to go to the live version and get acquainted with the entire internal structure and functionality of the application. I think it will be difficult to believe that this store works without a backend. I had to think through many backend functionalities on the frontend side. Of course, many solutions are controversial and go against programming paradigms, but the task was set, and it had to be solved with the means that are in my arsenal of knowledge. Well, I think this description will be enough to warm up interest in my development, it's time to look and try all the possibilities of this store: https://online-store-shop-co.vercel.app/.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies used (Используемые технологии)
+* VueJs
+* Vuex
+* Vue Router
+* SCSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Visual display of the application's operation (Визуальное отображение функциональности или экранов приложения)
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+  <div style="text-align: center; max-width: 700px;">
+    <img src="src/assets/img/projectDescription/homepage.png"/>
+    <p><b>Picture 1.</b> Homepage.</p>
+  </div>
+  <div style="text-align: center; max-width: 700px;">
+    <img src="src/assets/img/projectDescription/catalog.png"/>
+    <p><b>Picture 2.</b> Catalog page.</p>
+  </div>
+  <div style="text-align: center;  max-width: 700px;">
+    <img src="src/assets/img/projectDescription/projectDetailsPage.png"/>
+    <p><b>Picture 3.</b> Project details page.</p>
+  </div>
+  <div style="text-align: center;  max-width: 700px;">
+    <img src="src/assets/img/projectDescription/cart.png"/>
+    <p><b>Picture 4.</b> Cart page.</p>
+  </div>
+  <div style="text-align: center;  max-width: 700px;">
+    <img src="src/assets/img/projectDescription/signUp.png"/>
+    <p><b>Picture 5.</b> Sign Up page.</p>
+  </div>
+  <div style="text-align: center;  max-width: 700px;">
+    <img src="src/assets/img/projectDescription/signIn.png"/>
+    <p><b>Picture 6.</b> Sign In page.</p>
+  </div>
+  <div style="text-align: center;  max-width: 700px;">
+    <img src="src/assets/img/projectDescription/notFoundPage.png"/>
+    <p><b>Picture 7.</b> Not Found page.</p>
+  </div>
+</div>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project setup
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Compiles and minifies for production
+```
+npm run build
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
