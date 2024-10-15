@@ -78,15 +78,15 @@ const cards = [
     viewLiveSrc: 'https://github.com/ivan-ust402/MP-react-and-other-technologies-training/blob/main/UlbiTV/react%2Bredux%2Btypescript/react-redux-typescript-1/README.md',
     viewCodeSrc: 'https://github.com/ivan-ust402/MP-react-and-other-technologies-training/tree/main/UlbiTV/react%2Bredux%2Btypescript/react-redux-typescript-1'
   },
-  {
-    filterTitle: 'VueJs',
-    filter: 'vue',
-    imgName: 'Interno.jpg',
-    projectTitle: 'Interno Website',
-    liveVersion: true,
-    viewLiveSrc: 'https://gb-vue-js.vercel.app/projects',
-    viewCodeSrc: 'https://github.com/ivan-ust402/GB-Vue.js/tree/main/project-vue-cli-refactoring'
-  },
+  // {
+  //   filterTitle: 'VueJs',
+  //   filter: 'vue',
+  //   imgName: 'Interno.jpg',
+  //   projectTitle: 'Interno Website',
+  //   liveVersion: true,
+  //   viewLiveSrc: 'https://gb-vue-js.vercel.app/projects',
+  //   viewCodeSrc: 'https://github.com/ivan-ust402/GB-Vue.js/tree/main/project-vue-cli-refactoring'
+  // },
   {
     filterTitle: 'HTML/CSS',
     filter: 'HTML/CSS',
