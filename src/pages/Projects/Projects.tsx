@@ -29,8 +29,8 @@ const cards = [
     filter: 'react/typescript',
     imgName: '1. First following a link. Redirect to sign In page.jpg',
     projectTitle: 'App with user registration and authorization',
-    liveVersion: false,
-    viewLiveSrc: 'https://github.com/ivan-ust402/MP-react-and-other-technologies-training/blob/main/MN/authorization-typescript/README.md',
+    liveVersion: true,
+    viewLiveSrc: 'https://mp-authtorization-typescript-blond.vercel.app',
     viewCodeSrc: 'https://github.com/ivan-ust402/MP-react-and-other-technologies-training/tree/main/MN/authorization-typescript'
   },
   {
